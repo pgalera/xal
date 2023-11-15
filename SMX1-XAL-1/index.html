@@ -117,43 +117,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Cerca">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Inicialitzant cerca
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
   
@@ -1078,7 +1041,7 @@
                   
 
 
-<h1 id="ud1-caracteritzacio-de-xarxes-locals">UD1. Caracterització de xarxes locals</h1>
+<div><h1 id="ud1-caracteritzacio-de-xarxes-locals">UD1. Caracterització de xarxes locals</h1>
 <h2 id="un-model-de-comunicacio">Un model de comunicació</h2>
 <p>A qualsevol comunicació poden distingir-se (mínim) 6 components:</p>
 <ul>
@@ -1123,42 +1086,42 @@
 </ul>
 <h4 id="bus">Bus</h4>
 <p>S'empra un únic cable per connectar els equips.</p>
-<p><img alt="Topologia física en bus" src="../img/topologies/bus.png" /></p>
+<p><img alt="Topologia física en bus" src="../img/topologies/bus.png"></p>
 <ul>
 <li><strong>Avantatges</strong>: baix cost per emprar poc cablejat.</li>
 <li><strong>Desavantatges</strong>: controlar les colisions. Xifrat per tal de mantenir la privacitat. Si falla un enllaç la xarxa deixa de funcionar completament.</li>
 </ul>
 <h4 id="malla">Malla</h4>
 <p>Interconnexió total de tots els nodes</p>
-<p><img alt="Topologia física en malla i malla totalment connexa" src="../img/topologies/malla.png" /></p>
+<p><img alt="Topologia física en malla i malla totalment connexa" src="../img/topologies/malla.png"></p>
 <ul>
 <li><strong>Avantatges</strong>: si una ruta falla es pot seleccionar altra alternativa.</li>
 <li><strong>Desavantatges</strong>: més costós perquè fa falta més cablejat.</li>
 </ul>
 <h4 id="estrela">Estrela</h4>
 <p>Connecta tots els cables amb un punt central de concentració. Per regla general es tracta d'un <em>Hub</em> o un <em>Switch</em>.</p>
-<p><img alt="Topologia física en estrela" src="../img/topologies/estrela.png" /></p>
+<p><img alt="Topologia física en estrela" src="../img/topologies/estrela.png"></p>
 <ul>
 <li><strong>Avantatges</strong>: el node central realitza les tasques de distribució, conmutació i control per evitar col·lisions.</li>
 <li><strong>Desavantatges</strong>: si el node central falla es queda tota la xarxa inutilitzada.</li>
 </ul>
 <h4 id="arbre">Arbre</h4>
 <p>Es connecten tots els nodes de forma jerarquitzada. Molt emprat en xarxes de telefonia on els enllaços intermedis són centraletes locals i regionals.</p>
-<p><img alt="Topologia física en arbre" src="../img/topologies/arbre.png" /></p>
+<p><img alt="Topologia física en arbre" src="../img/topologies/arbre.png"></p>
 <ul>
 <li><strong>Avantatges</strong>: cost bastant optimitzat.</li>
 <li><strong>Desavantatges</strong>: la fallada d'un node o enllaç deixa un conjunt de nodes incomunicats.</li>
 </ul>
 <h4 id="anell">Anell</h4>
 <p>Tots els nodes estan connectats a una única via amb els seus dos extrems units.</p>
-<p><img alt="Topologia física en anell" src="../img/topologies/anell.png" /></p>
+<p><img alt="Topologia física en anell" src="../img/topologies/anell.png"></p>
 <ul>
 <li><strong>Avantatges</strong>: s'eviten col·lisions.</li>
 <li><strong>Desavantatges</strong>: si fall un enllaç, la xarxa deixa de funcionar completament.</li>
 </ul>
 <h4 id="mixta-o-irregular">Mixta o irregular</h4>
 <p>És el que s'empra a la vida real quan la xarxa té certa envergadura. Es mesclen diverses topologies.</p>
-<p><img alt="Topologia física mixta" src="../img/topologies/mixta.png" /></p>
+<p><img alt="Topologia física mixta" src="../img/topologies/mixta.png"></p>
 <ul>
 <li><strong>Avantatges</strong>: cada tram s'adapta a les seues característiques.</li>
 <li><strong>Desavantatges</strong>: major complexitat de gestió del trànsit.</li>
@@ -1237,7 +1200,7 @@
 <p>Condueixen la senyal per transportar la informació. El sistema de cablejat està format pel cable (normalment coure o fibra òptica) i els seus connectors. Cada tipus de cablejat porta el seu propi sistema de connectorització.</p>
 <h3 id="els-dispositius-de-xarxa">Els dispositius de xarxa</h3>
 <p>Interconnecten màquines i serveis. Poden ser mòdems, routers, proxies, repetidors...</p>
-<p><img alt="Diferents dispositius de xarxa" src="../img/components_xarxa.png" /></p>
+<p><img alt="Diferents dispositius de xarxa" src="../img/components_xarxa.png"></p>
 <h3 id="nodes-de-la-xarxa">Nodes de la xarxa</h3>
 <p>Els nodes poden estar connectats a la xarxa mitjançant cable o sense fil. Cada node requerirà al menys d'una interfícies de xarxa per poder connectar-se al cable o antena.</p>
 <h3 id="software-de-xarxa">Software de xarxa</h3>
@@ -1265,15 +1228,15 @@
 <h3 id="multiplexacio">Multiplexació</h3>
 <p>Si compartim un medi de transmissió, hem d'assegurar que si hi han més d'una comunicació al mateix temps que no s'interferisquen.</p>
 <h3 id="arquitectura-per-capes">Arquitectura per capes</h3>
-<p><img alt="Xarxa per capes" src="../img/capes/xarxa_capes.jpg" /></p>
+<p><img alt="Xarxa per capes" src="../img/capes/xarxa_capes.jpg"></p>
 <p>És molt més senzill descomposar els problemes de la xarxa si la organitzem en <strong>capes o nivells</strong> i que cada capa s'encarregue d'una funcionalitat.</p>
 <p><strong>Cada capa ofereix uns serveis a les capes superiors</strong>, alliberant-les de coneixement detallat de com es realitzen aqueixos serveis.</p>
 <p>Al mateix temps, <strong>la capa <em>n</em> en una màquina conversa amb la capa <em>n</em> de l'altra màquina</strong>.</p>
 <p>Les regles i convencions emprades en aquesta cnversació es coneixen conjuntament com <strong>protocol de la capa <em>n</em></strong>.</p>
 <p>Quan un sistema vol enviar un missatge a altre, la informació ha de "baixar" fins al medi físic i a través d'aquest arribar al sistema remot. Conforme va descendint es produeixen transformacions, per exemple, addició de camps de capçalera, fragmentació de paquets en altres més menuts... Totes aquestes transformacions són reversibles i en el sistema remot es realitzen en sentit invers fins que un missatge igual que l'original és depositat al nivell de destí.</p>
-<p><img alt="Addició de camps en un sistema per capes" src="../img/capes/xarxa_capes_2.jpg" /></p>
+<p><img alt="Addició de camps en un sistema per capes" src="../img/capes/xarxa_capes_2.jpg"></p>
 <p>Entre cada parell de capes adjacents hi ha una interfície, <strong>que defineix els serveis i operacions primitives que la capa inferior ofereix a la superior</strong>. El disseny clar i net d'una interfície, a més a més de minimitzar la quantitat d'informació que deu passar-se entre capes, fa més simple la substitució d'una capa per altra completament diferent.</p>
-<p><img alt="Interfície entre capes" src="../img/capes/interficie_capes.jpg" /></p>
+<p><img alt="Interfície entre capes" src="../img/capes/interficie_capes.jpg"></p>
 <h4 id="el-model-iso-osi">El model ISO-OSI</h4>
 <div class="admonition info">
 <p class="admonition-title">Un model de referència</p>
@@ -1281,8 +1244,8 @@
 <p><strong>OSI</strong> no és realment una arquitectura de xarxa, sino un <strong>model de referència</strong>, és a dir, un model teòric que <strong>cimenta les bases</strong> del que hauria de ser la "arquitectura de xarxa ideal", però és massa purista i aparegué tard.</p>
 </div>
 <p>El model proposat per OSI està estructurat en <strong>7 capes</strong> o nivells, casadcun d'ells s'encarrega d'oferir una sèrie de serveis a la capa superior i de tornar resultats a la capa inferior.</p>
-<p><img alt="Esquema del model OSI" src="../img/capes/osi-1.png" /></p>
-<p><img alt="Altre esquema del model OSI" src="../img/capes/osi-2.png" /></p>
+<p><img alt="Esquema del model OSI" src="../img/capes/osi-1.png"></p>
+<p><img alt="Altre esquema del model OSI" src="../img/capes/osi-2.png"></p>
 <h5 id="nivell-fisic-i">Nivell físic (I)</h5>
 <p>La capa física s'encarrega de definir les característiques <strong>mecàniques, elèctriques, funcionales i de procediment</strong> per poder establir i alliberar connexions entre dos equips de xarxa.</p>
 <p>És la capa de nivell més baix, s'encarrega de les <strong>tranmissions dels bits</strong> i defineix paràmetres com: durada dels polsos elèctrics, nombre de Volts (V) de la senyal, la modulació, el tipus de cablejat...</p>
@@ -1308,8 +1271,8 @@
 <h5 id="nivell-daplicacio-vii">Nivell d'aplicació (VII)</h5>
 <p>És la capa superior de la jerarquia i és la capa amb la qual es comuniquen les aplicacions.</p>
 <p>S'encarrega d'oferir una <strong>inferfície comú a través de la qual es comunicaran les aplicacions</strong>, sense tenir en compte si l'aplicació orige i la aplicació destí estan a la mateixa màquina o en màquines diferents.</p>
-<hr />
-<p><img alt="Model ISO-OSI i protocols de les capes" src="../img/capes/osi-3.png" /></p>
+<hr>
+<p><img alt="Model ISO-OSI i protocols de les capes" src="../img/capes/osi-3.png"></p></div>
 
 
 
