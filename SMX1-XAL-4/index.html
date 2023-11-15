@@ -478,11 +478,11 @@
 <h1 id="ud4-dispositius-dinterconnexio-de-xarxes">UD4. Dispositius d'interconnexió de xarxes</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>Els dispositius d'interconnexió de xarxes treballen entre els nivells 1 i 3 del model OSI, és a dir, físic, enllaç i xarxa.</p>
-<p><img alt="Dispositius de xarxa" src="../img/dispositius/dispositius_xarxa.jpg" /></p>
+<p><center><img alt="Dispositius de xarxa" src="../img/dispositius/dispositius_xarxa.jpg" width="50%" /></center></p>
 <h2 id="repetidor">Repetidor</h2>
 <p>El repetidor <strong>rep un senyal atenuat i retorna el senyal al seu estat original</strong>. Per exemple: hem vist que la distancia màxima del cablejat UTP és de 100 m, és per això que necessitarem repetidors per tal d'amplificar la cobertura.</p>
 <p>Els repetidors treballen a nivell 1 (físic):</p>
-<p><img alt="Repetidor" src="../img/dispositius/repetidor_osi.png" /></p>
+<p><center><img alt="Repetidor" src="../img/dispositius/repetidor_osi.png" width="50%" /></center></p>
 <p>L'anomenarem <strong>amplificador</strong> si s'encarrega de regenerar senyals <strong>analògics</strong> i li direm <strong>repetidor</strong> si regenera senyals <strong>digitals</strong> a escala de bits.</p>
 <p>Els repetidors i amplificadors presenten algunes <strong>limitacions</strong>:</p>
 <ul>
@@ -496,7 +496,7 @@
 <h2 id="hub">Hub</h2>
 <p>El hub o concentrador s'encarrega de <strong>regenerar els senyals de xarxa</strong> d'igual forma que un repetidor, però <strong>permet més d'un dispositiu</strong>, per això, de vegades, se'ls anomena repetidors multiports.</p>
 <p>Els <strong>hubs</strong> es consideren, per tant, dispositius de <strong>capa 1</strong> donat que sols regeneren el senyal i l'envien mitjançant un <em>broadcast</em> (envien informació a tota la resta d'equips) a tots els ports.</p>
-<p><img alt="Hub IBM" src="../img/dispositius/hub.png" /></p>
+<p><center><img alt="Hub IBM" src="../img/dispositius/hub.png" width="50%" /></center></p>
 <ul>
 <li><strong>AVANTATGES</strong>:</li>
 <li>Crea un <strong>punt de connexió central</strong> per als ordinadors.</li>
@@ -522,8 +522,8 @@
 <li><strong>Connectors per unir estacions de treball</strong>.</li>
 <li><strong>Connectors per a unir-se a altres Hubs</strong>: permeten la connexió de diversos Hubs mitjançant <strong>enllaços especials (creuats)</strong>. De vegades existeix un botó, anomenat <strong><em>crossover</em></strong> que ha de mantenir-se actiu per poder unir Hubs. Altres vegades aquest enllaç està sempre actiu i sol tenir el nom d'<strong><em>uplink</em></strong>.</li>
 </ul>
-<p><img alt="Hub amb enllaç *uplink*" src="../img/dispositius/hub_uplink.jpg" /></p>
-<p><img alt="Hub amb *crossover*" src="../img/dispositius/hub_crossover.png" /></p>
+<p><center><img alt="Hub amb enllaç uplink" src="../img/dispositius/hub_uplink.jpg" width="50%" /></center></p>
+<p><center><img alt="Hub amb crossover" src="../img/dispositius/hub_crossover.png" width="50%" /></center></p>
 <h3 id="connexio-entre-hubs">Connexió entre Hubs</h3>
 <ul>
 <li><strong>Connexió en cascada</strong>: es permeten fins a 4 Hubs si la xarxa treballa a 10 Mbps o 2 si la xarxa treballa a 100 Mbps. Si es volen connectar més serà necessari emprar repetidors intermedis o emprar connexions en estrela (més recomanable).</li>
@@ -548,17 +548,17 @@
 <p>Un pont és un <strong>dispositiu de capa 2 (enllaç)</strong> dissenyat per <strong>connectar dos segments</strong> LAN, que poden tenir <strong>diferents topologies i diferents protocols</strong> a nivell MAC i d'enllaç. Per exemple, poden connectar una xarxa <em>Ethernet</em> amb una <em>Token ring</em>.</p>
 <p>Un pont és un dispositiu amb dos ports que tenen certa <strong>capacitat de control</strong>, permetent acceptar i reexpedir trames en funció del seu contingut.</p>
 <p>El propòsit d'un pont és <strong>filtrar el tràfic d'una LAN</strong>, perquè el tràfic local seguisca essent local, però <strong>permetent la connectivitat a altres parts (segments) de la LAN</strong> per tal d'enviar tràfic dirigit a aquestes altres parts.</p>
-<p><img alt="Esquema de xarxa amb bridge" src="../img/dispositius/bridge_esquema.jpg" /></p>
-<p><img alt="Convertidor Fibra-Ethernet" src="../img/dispositius/bridge_fibra_t.png" /></p>
-<div class="admonition question">
-<p class="admonition-title">Què és un segment d'una xarxa?</p>
+<p><center><img alt="Esquema de xarxa amb bridge" src="../img/dispositius/bridge_esquema.jpg" width="75%" /></center></p>
+<p><center><img alt="Convertidor Fibra-Ethernet" src="../img/dispositius/bridge_fibra_t.png" width="50%" /></center></p>
+<details class="question">
+<summary>Què és un segment d'una xarxa?</summary>
 <p>Quan la xarxa es divideix en 2 segments es consideren dues parts distintes de la xarxa. Per exemple, la xarxa del pis 1 i la del pis 2 que estan connectades; en una petita empresa que té dues oficines en dos edificis i estan connectats entre si...</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Si un pont permet la connectivitat entre 2 segments, com pot detectar el pont quin és el tràfic d'un segment i quin no?</p>
+</details>
+<details class="question">
+<summary>Si un pont permet la connectivitat entre 2 segments, com pot detectar el pont quin és el tràfic d'un segment i quin no?</summary>
 <p>Emprant el mateix sistema que el servei de correus, mitjançant adreces físiques (MAC) un pont identifica de quin segment és el tràfic que li arriba.</p>
 <p>Cada dispositiu de xarxa té una adreça MAC exclusiva a la targeta de xarxa, el pont <strong>rastreja quines són les adreces MAC que estan ubicades a cada costat d'ell</strong> i pren les seues decisions basant-se en un llistat d'adreces MAC.</p>
-</div>
+</details>
 <h3 id="domini-de-collisio">Domini de col·lisió</h3>
 <p>Grup de dispositius connectats al mateix medi físic, de manera que si dos dispositius accedeixen al medi al mateix temps, el resultat serà una col·lisió entre els dos senyals.</p>
 <p>A causa d'aquestes col·lisions es produeix un consum inadequat de recursos i d'amplada de banda que pot dur a congestions serioses de la xarxa. Com menor siga la quantitat de dispositius en un domini de col·lisió, millor funcionarà la xarxa.</p>
@@ -569,23 +569,23 @@
 <li><strong>Software</strong>: Un ordinador amb dues targetes de xarxa i una aplicació que li permeta actuar com a pont.</li>
 <li><strong>Hardware</strong>: dispositiu específic.</li>
 </ul>
-<p><img alt="Bridge vs Switch" src="../img/dispositius/Comparaci%C3%B3n-entre-Bridge-y-Switch.png" /></p>
+<p><center><img alt="Bridge vs Switch" src="../img/dispositius/Comparaci%C3%B3n-entre-Bridge-y-Switch.png" width="75%" /></center></p>
 <h2 id="switch-o-commutador">Switch o Commutador</h2>
 <p>Permet la interconnexió de xarxes a nivell d'enllaç.</p>
-<p><img alt="Switch en capa 2 OSI" src="../img/dispositius/switch_osi.jpg" /></p>
+<p><center><img alt="Switch en capa 2 OSI" src="../img/dispositius/switch_osi.jpg" width="50%" /></center></p>
 <p>Emprant l'adreça MAC, els switchs són capaços d'<strong>enviar les dades tan sols cap al port de destí</strong>.</p>
 <p>El commutador permet <strong>repartir l'amplada de banda</strong> de la xarxa d'una manera apropiada en cada segment de la xarxa de forma transparent als usuaris.</p>
 <p>Existeixen al mercat alguns commutadors de nivell 3 que incorporen funcions d'encaminament però amb la velocitat de la commutació.</p>
 <p>Els switchs són gestionables mitjançant <strong>protocols</strong> típics de gestió de xarxa: SNMP, RMON... La majoria d'ells són <strong>gestionables via web</strong>.</p>
 <p>La majoria dels switchs son <strong>apilables i fàcilment escalables</strong>. Solen connectar-se entre ells mitjançant el port <strong><em>MDIX o MDI-X (Medium Dependent Interface Crossover)</em></strong>.</p>
 <p>Emprant tecnologia específica dels switchs, les xarxes d'àrea local virtuals (<strong>VLANs</strong>) permeten que els nodes de la xarxa es connecten a xarxes lògiques en compte de xarxes físiques.</p>
-<p><img alt="Switch Huawei 48p" src="../img/dispositius/switch48p.jpg" /></p>
+<p><center><img alt="Switch Huawei 48p" src="../img/dispositius/switch48p.jpg" width="75%" /></center></p>
 <h2 id="router-o-encaminador">Router o Encaminador</h2>
 <p>Permet la <strong>interconnexió de xarxes a nivell de xarxa (nivell 3)</strong>. S'encarrega de seleccionar la millor ruta per tal que els paquets (datagrames) arriben al seu destí.</p>
-<p><img alt="Router en capa 3 OSI" src="../img/dispositius/router_osi.png" /></p>
+<p><center><img alt="Router en capa 3 OSI" src="../img/dispositius/router_osi.png" width="50%" /></center></p>
 <p>Els encaminadors s'han convertit en el nucli d'Internet al ser els reguladors del tràfic. Prenen <strong>decisions basades en grups d'adreces de xarxa (mitjançant les adreces IP i les màscares)</strong> emprant el protocol IP.</p>
 <p>Els routers també poden <strong>connectar distintes tecnologies de capa d'enllaç</strong>. Per exemple Ethernet, Token-ring i FDDI (fibra òptica).</p>
-<p><img alt="Router CISCO" src="../img/dispositius/router_cisco.jpg" /></p>
+<p><center><img alt="Router CISCO" src="../img/dispositius/router_cisco.jpg" width="75%" /></center></p>
 <h3 id="caracteristiques">Característiques</h3>
 <ul>
 <li><strong>Interpreten les adreces lògiques (adreces IP)</strong> de la capa 3 (xarxa), en compte de les adreces MAC de la capa d'enllaç com fan els ponts o commutadors.</li>
@@ -618,7 +618,7 @@
 </ul>
 </li>
 </ul>
-<p><img alt="Router Mikrotik" src="../img/dispositius/router_mikrotik.jpg" /></p>
+<p><center><img alt="Router Mikrotik" src="../img/dispositius/router_mikrotik.jpg" width="75%" /></center></p>
 <h3 id="protocols-dencaminament">Protocols d'encaminament</h3>
 <p>Un protocol d'encaminament és el que empra el router per a comunicar-se amb altres routers i aprendre la topologia de la xarxa. És utilitzat per calcular quin és el millor camí (<strong><em>best path</em></strong>) per tal d'arribar al destí.</p>
 <p>El millor camí dependrà de l'activitat de la xarxa (enllaços actius, velocitat de transmissió entre enllaços...)</p>
@@ -632,7 +632,7 @@
 <p>Moltes vegades es confon el terme passarel·la amb el terme encaminador o router.</p>
 <p>A l'arquitectura TCP/IP una passarel·la és un dispositiu que s'encarrega de l'encaminament de la informació i la interconnexió de xarxes diferents.</p>
 <p>La <strong>passarel·la (porta d'enllaç o <em>gateway</em>)</strong> és molt més que un router, perquè s'encarrega de <strong>comunicar xarxes amb distinta arquitectura</strong>: TCP/IP, ATM, OSI, X.25...</p>
-<p><center><img alt="Router? domèstic" src="../img/dispositius/router_domestic_dlink.png" width="50%" /></center></p>
+<p><center><img alt="Router? domèstic" src="../img/dispositius/router_domestic_dlink.png" width="75%" /></center></p>
 
 
 
