@@ -119,6 +119,43 @@
     
     
     
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
     
   </nav>
   
@@ -687,7 +724,7 @@
                   
 
 
-<div><h1 id="ud2-installacio-fisica-duna-xarxa-i-medis-de-transmissio">UD2. Instal·lació física d'una xarxa (I). Medis de transmissió</h1>
+<h1 id="ud2-installacio-fisica-duna-xarxa-i-medis-de-transmissio">UD2. Instal·lació física d'una xarxa (I). Medis de transmissió</h1>
 <h2 id="introduccio">Introducció</h2>
 <p>El <strong>medi de transmissió</strong> és el suport físic que facilita el transport de la informació i suposa una part fonamental en la comunicació de les dades.</p>
 <p>Normalment es realitza la tranmissió emprant cablejat de xarxa, però també es pot fer sense fil, de manera inalàmbrica.</p>
@@ -726,7 +763,7 @@
 <li>Parelles trenades entre sí.</li>
 <li>Recobriment mitjançant funda protectora.</li>
 </ul>
-<p><img alt="esquema de cable de parell trenat amb apantallament" src="../img/cables/tp-2.jpg"></p>
+<p><center><img alt="esquema de cable de parell trenat amb apantallament" src="../img/cables/tp-2.jpg" width="50%" /></center></p>
 <p>Constitueixen el mode més <strong>simple i econòmic</strong> de tots els medis de transmissió.</p>
 <p>Es tracta d'un cable molt <strong>susceptible a interferències electromagnètiques (EM I)</strong> i per tal de reduir-les tenim dues actuacions:</p>
 <ul>
@@ -748,30 +785,31 @@
 <li>Connecta habitualment estacions de treball, terminals i dispossitius.</li>
 </ul>
 <p>Tot açò fa que siga <strong>el cable més emprat per a comunicar xarxes d'ordinadors</strong>.</p>
-<p><img alt="Cable UTP" src="../img/cables/utp.jpg"></p>
+<p><center><img alt="Cable UTP" src="../img/cables/utp.jpg" width="50%" /></center></p>
 <h4 id="cable-stp">Cable STP</h4>
 <p><strong><em>STP (Shielded Twisted Pair)</em></strong> significa <em>parell trenat apantallat</em>.</p>
 <p>Es tracta d'un cable apantallat, molt similar a l'UTP però amb un recobriment per a cada parella de cables (normalment metàlic). El recobriment ha de conectar-se a la terra de la instal·lació per a les derivacions elèctriques.</p>
 <p>L'esmentat recobriment <strong>redueix el soroll</strong> exterior del cable produït per interferències electromagnètiques (EMI) i de radiofreqüència (RFI). També redueix el soroll elèctric dins del cable. Al tractar-se d'un cable més protegit pot treballar amb distàncies i freq¨`encies majors.</p>
-<p><img alt="Cable STP" src="../img/cables/stp.jpg"></p>
+<p><center><img alt="Cable STP" src="../img/cables/stp.jpg" width="66%" /></center></p>
 <h4 id="cable-ftp">Cable FTP</h4>
 <p><strong><em>FTP (Foiled Twisted Pair)</em></strong> significa <em>parell trenat amb pantalla global</em>. És semblant al STP, però el recobriment és exterior i global.</p>
-<p><img alt="Cable FTP" src="../img/cables/ftp.jpg" width="6cm"></p>
-<hr>
-<p><img alt="Comparativa de seccions de cables UTP, FTP i STP" src="../img/cables/comparativa.png"></p>
-<p>Els cables <strong>STP i FTP</strong> tenen alguns desavantatges:</p>
+<p><center><img alt="Cable FTP" src="../img/cables/ftp.jpg" width="66%" /></center></p>
+<div class="admonition info">
+<p class="admonition-title">Els cables <strong>STP i FTP</strong> tenen alguns desavantatges</p>
 <ul>
 <li>Falta de flexibilitat</li>
 <li>Incòmodes d'instal·lar</li>
 <li>Més cars que el cable UTP</li>
 </ul>
 <p>Per aquestes raons, normalment sols s'empren en línies troncals o en llocs molt exposats a interferències electromagnètiques.</p>
+</div>
 <h4 id="classificacio-de-cables-de-parell-trenat">Classificació de cables de parell trenat</h4>
 <p>Dintre dels <strong>parells trenats</strong> podem distingir <strong>2 classificacions</strong>:</p>
 <ul>
 <li><strong>Les catergories</strong>: cada categoria especifica unes característiques elèctriques per al cable: atenuació, capacitat de la linia, freqüència de treball màxima...</li>
 <li><strong>Les classes</strong>: cada classe especifica les distàncies permeses, l'ample de banda aconseguit i les aplicacions per a les quals és útil en funció d'aquestes característiques.</li>
 </ul>
+<p><center></p>
 <table>
 <thead>
 <tr>
@@ -820,12 +858,13 @@
 </tr>
 </tbody>
 </table>
+<p></center></p>
 <h3 id="cable-coaxial">Cable coaxial</h3>
 <p>Degut al seu tipus d'apantallament és menys susceptible a interferències (EMI) que el parell trenat.</p>
 <p>Està compost per una malla de coure recobert d'una capa aïllant flexible. També pot estar fet d'alumini recobert d'estany (més econòmic).</p>
 <p>Permet cobrir majors distàncies (entre 500 m i varios km) i connectar un major nombre d'estacions en una línia compartida.</p>
 <p>Degut a la seua duresa i poca flexibilitat ha deixat d'emprar-se en instal·lacions de cablejat estructurat, però continua utilitzant-se en la distribució de TV per cable.</p>
-<p><img alt="Cable coaxial" src="../img/cables/coaxial.jpg"></p>
+<p><center><img alt="Cable coaxial" src="../img/cables/coaxial.jpg" width="50%" /></center></p>
 <ul>
 <li>
 <p><strong>AVANTATGES</strong>:</p>
@@ -845,10 +884,10 @@
 </ul>
 </li>
 </ul>
-<p><img alt="Coaxial vs Parell trenat" src="../img/cables/coaxVStp.png"></p>
+<p><center><img alt="Coaxial vs Parell trenat" src="../img/cables/coaxVStp.png" width="75%" /></center></p>
 <h3 id="fibra-optica">Fibra òptica</h3>
 <p>La fibra òptica permet la <strong>trensmissió de senyals lluminoses</strong>. Sol ser de vidre o altres materials plàstics.</p>
-<p><img alt="Rack de transcivers de fibra òptica" src="../img/cables/rack-fo.jpg"></p>
+<p><center><img alt="Rack de transcivers de fibra òptica" src="../img/cables/rack-fo.jpg" width="66%" /></center></p>
 <p>Al no emprar corrent elèctrica per a la transmissió és totalment <strong>insensible a les interferències electromagnètiques (EMI)</strong>.</p>
 <p>Un cable de fibra òptica consta de:</p>
 <ul>
@@ -856,7 +895,7 @@
 <li>un revestiment que impedeix que es filtre la llum.</li>
 <li>una coberta que protegeix i aïlla el cable.</li>
 </ul>
-<p><img alt="Composició d'un cable de fibra òptica" src="../img/cables/fo-compos.jpg"></p>
+<p><center><img alt="Composició d'un cable de fibra òptica" src="../img/cables/fo-compos.jpg" width="66%" /></center></p>
 <p>Com a <strong>font del senyal</strong> sol emprar-se:</p>
 <ul>
 <li>Làser</li>
@@ -879,7 +918,7 @@
 <p>Sols es propaga un mode de llum.</p>
 <p>S'aconseguiex reduïnt el diàmetre de la fibra fins un tamany que sols permet un mode de propagació.</p>
 <p>La seua transmissió és paral·lela a l'eix de la fibra. Grans distàncies (300 km) i elevades taxes de transferència (desenes de Gbps).</p>
-<p><img alt="Fibra òptica mono-mode" src="../img/cables/mono.png"></p>
+<p><center><img alt="Fibra òptica mono-mode" src="../img/cables/mono.png" width="75%" /></center></p>
 <h4 id="fibra-optica-multi-mode">Fibra òptica multi-mode</h4>
 <p>Els rajos de llum poden circular per més d'un mode o camí. Se suposa que no arriben tots a la vegada.</p>
 <p>Pot tenir més de mil modes de propagació de llum. Les fibres multi-mode s'utilitzen comunment en aplicacions de curta distància, menors a 1 km; és simple de dissenyar i econòmic.</p>
@@ -887,16 +926,16 @@
 <ul>
 <li><strong>Índex escalonat</strong>: té un índex de refracció constant en tota la secció cilíndrica.</li>
 </ul>
-<p><img alt="F.O. Multi-mode escalonat" src="../img/cables/multi-esc.png"></p>
+<p><center><img alt="F.O. Multi-mode escalonat" src="../img/cables/multi-esc.png" width="75%" /></center></p>
 <ul>
 <li><strong>Índex gradual</strong>: l'índex de refracció a l'interior del nucli no és únic i decreix quan es desplaça del nucli fins la coberta.</li>
 </ul>
-<p><img alt="F.O. Multi-mode gradual" src="../img/cables/multi-grad.png"></p>
+<p><center><img alt="F.O. Multi-mode gradual" src="../img/cables/multi-grad.png" width="75%" /></center></p>
 <h2 id="transmissions-sense-fil">Transmissions sense fil</h2>
 <p>Les tecnologies sense fil empren <strong>ones electromagnètiques</strong> per transportar la informació entre els dispossitius.</p>
 <p>Alguns tipus d'ones electromagnètiques no son adequades per transportar dades. Altres, estan regulades èr governs. Algunes àrees de l'espectre s'han reservat per a ús públic sense tindre que demanar permissos.</p>
 <p>L'<strong>espectre electromagnètic</strong> inclou <strong>bandes de transmissió de radio i televisió, llum visible, rajos X i rajos gamma</strong>. Cadaascun d'aquests elements té un rang específic de longitut d'ona.</p>
-<p><img alt="Espectre electromagnètic" src="../img/sense%20fils/eem.jpg"></p>
+<p><center><img alt="Espectre electromagnètic" src="../img/sense%20fils/eem.jpg" width="75%" /></center></p>
 <p>Les longituts d'ona més emprades per a comunicacions sense fil públiques son la <strong>infraroja i la part de radiofreqüència (RF)</strong>:</p>
 <ul>
 <li>Ona curta (freqüències de MHz): emprades en <strong>radio i TV</strong>.</li>
@@ -923,7 +962,7 @@
 <li>Transmeten senyals de dades mitjançant diodes d'<strong>emissió de llum</strong> (LED o làser). La informació <strong>no pot viatjar a través d'obstacles</strong>.</li>
 <li>Emprat per connectar i tranportar dades entre dispossitius com <strong>PDA i PCs</strong>. Utilitza un <strong>port de comunicacions especial anomenat irDA</strong>.</li>
 </ul>
-<p><img alt="Detall del port d'infrarrojos d'un nokia 6600" src="../img/sense%20fils/nokia-irda.jpg"></p>
+<p><center><img alt="Detall del port d'infrarrojos d'un nokia 6600" src="../img/sense%20fils/nokia-irda.jpg" width="50%" /></center></p>
 <h3 id="radiofrequencia-rf">Radiofreqüència (RF)</h3>
 <p>Algunes bandes de radiofreqüències s'han reservat per a l'ús de dispossitius sense llicència, com les <strong>LAN sense fil, telèfons sense fil, perifèrics d'ordinadors</strong>...</p>
 <ul>
@@ -942,16 +981,17 @@
 <h4 id="bluetooth-bt">Bluetooth (BT)</h4>
 <p>Especificació per a xarxes sense fil d'àrea personal (WPAN) que possibilita la transmissió de veu i dades entre diferents dispossitius mitjançant un enllaç per radiofreqüència en la banda dels <strong>2'4GHz</strong>.</p>
 <p>Aquesta norma facilita les comunicacions entre equips mòbils, elimina el cablejat i connectors i ofereix la possibilitat de crear xicotetes xarxes sense fil i facilitar la sincronització de dades entre equips personals.</p>
-<p><img alt="Dispositius que habitualment tenen connexió bluetooth" src="../img/sense%20fils/disp-bt.jpg"></p>
+<p><center><img alt="Dispositius que habitualment tenen connexió bluetooth" src="../img/sense%20fils/disp-bt.jpg" width="50%" /></center></p>
 <h4 id="microones">Microones</h4>
 <p>Es tracta d'un tipus eficaç de transmissió de dades sense fils.</p>
 <ul>
 <li><strong>Terrestre</strong>: empra dues torres de microones amb <strong>camp de visió clar</strong> entre elles; per tant, no han d'ahver-hi obstacles per interrompre l'esmentat camp visual. La freqüència de transmissió de dades dels sistemes terrestres és de 4 GHz a 23 GHz, mentre que les <strong>velocitats</strong> soles estar entre <strong>1Mbps i 10 Mbps</strong>.</li>
 <li><strong>Satèlit</strong>: giren a vora 40.000 km sobre La Terra. Les estacions terrestres envien i reben senyals de dades cap i desde el satètil amb freqüències que oscilen entre 11 GHz i 14 GHz, amb velocitats de desenes de Mbps.</li>
 </ul>
-<p><img alt="Esquema d'accés a Internet via satèlit" src="../img/sense%20fils/internet-satelite.jpg"></p>
+<p><center><img alt="Esquema d'accés a Internet via satèlit" src="../img/sense%20fils/internet-satelite.jpg" width="50%" /></center></p>
 <h4 id="lan-sense-fils-wifi">LAN sense fils (WiFi)</h4>
 <p>Les transmissions en LANs sense fil arriben a velocitats de transmissió moderades, encara que amb l'aparcició del 802.11n i posteriors s'arriben a "altes" velocitats (&gt;300 Mbps). Les distintes versions de Wifi que existeixen estan descrites a la normativa <a href="https://es.wikipedia.org/wiki/IEEE_802.11#:~:text=802.11n%20es%20la%20forma,datos%20de%20hasta%20600%20Mbps.">IEEE 802.11</a>. A la següent taula podem veure les principals característiques de les variants que s'utilitzen actualment.</p>
+<p><center></p>
 <table>
 <thead>
 <tr>
@@ -1014,8 +1054,10 @@
 </tr>
 </tbody>
 </table>
+<p></center></p>
 <h4 id="wimax">WIMAX</h4>
 <p>Les transmissions en <strong>WIMAX</strong> segueixen la normativa IEEE 802.16. Semblant al WIFI però amb cobertures majors a canvi de velocitats menors.</p>
+<p><center></p>
 <table>
 <thead>
 <tr>
@@ -1046,7 +1088,8 @@
 <td style="text-align: center;">75Mbps</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+<p></center></p>
 
 
 
