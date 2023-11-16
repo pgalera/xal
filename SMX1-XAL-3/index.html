@@ -539,8 +539,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#algoritme-csmacd" class="md-nav__link">
-    Algoritme CSMA/CD
+  <a href="#algorisme-csmacd" class="md-nav__link">
+    Algorisme CSMA/CD
   </a>
   
 </li>
@@ -821,8 +821,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#algoritme-csmacd" class="md-nav__link">
-    Algoritme CSMA/CD
+  <a href="#algorisme-csmacd" class="md-nav__link">
+    Algorisme CSMA/CD
   </a>
   
 </li>
@@ -1181,8 +1181,31 @@
 <li>Codi basat en la <strong><em>redundància cíclica (CRC)</em></strong></li>
 <li><strong><em>Codi de Hamming</em></strong></li>
 </ul>
-<h3 id="algoritme-csmacd">Algoritme CSMA/CD</h3>
-<p><center><img alt="Algoritme CSMA/CD" src="../img/ethernet/csma-cd.png" width="50%" /></center></p>
+<h3 id="algorisme-csmacd">Algorisme CSMA/CD</h3>
+<ul>
+<li>
+<p><em>Carrier Sense (Sentit de Portadora):</em> Les estacions escolten el medi abans d'enviar dades per assegurar-se que està lliure.</p>
+</li>
+<li>
+<p><em>Multiple Access (Accés Múltiple):</em> Múltiples estacions tenen l'accés simultani al medi compartit, com un cable d'una xarxa local.</p>
+</li>
+<li>
+<p><em>Collision Detection (Detecció de Col·lisions):</em> Si dues estacions intenten transmetre alhora i es produeix una col·lisió, aquesta és detectada. Les estacions interrompen la transmissió, esperen un temps aleatori i tornen a intentar.</p>
+</li>
+</ul>
+<p>Aquest algorisme era utilitzat en les primeres implementacions de <strong>xarxes Ethernet amb topologia de bus</strong>, però ha disminuït amb l'ús de topologies més eficients com estrelles i commutadors (<em>switches</em>). Les xarxes modernes prefereixen protocols com <strong>CSMA/CA</strong> (<em>Carrier Sense Multiple Access with Collision Avoidance</em>) per una gestió més eficient dels recursos i la prevenció de col·lisions.</p>
+<pre class="mermaid"><code>graph LR
+    A[INICI] --&gt; B[Comprovar el medi];
+    B --&gt; C{Medi lliure?};
+    C --&gt; |No|B;
+    C --&gt; |Si|D[Envia dades];
+    D --&gt; E{Colisió?};
+    E --&gt; |No|F[FI];
+    E --&gt; |Si|G[Senyal JAM];
+    G --&gt; H{Queden intents?};
+    H --&gt; |No|F;
+    H --&gt; |Si|I[Backoff];
+    I --&gt; A</code></pre>
 <h3 id="tipus-dethernet">Tipus d'Ethernet</h3>
 <p><center></p>
 <table>
