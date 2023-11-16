@@ -1019,9 +1019,9 @@
 </ul>
 <h3 id="configuracio-de-ladaptador-de-xarxa">Configuració de l'adaptador de xarxa</h3>
 <p>Cada Sistema Operatiu té una forma d'accedir als adaptadors de xarxa. Quan accedeixes a les seues propietats pots consultar l'adreça IP, la porta d'enllaç o els DNS.</p>
-<p>En sistemes <strong>Linux</strong>, es pot accedir a molta d'aquesta informació mitjançant el comandament <strong><em>ip a</em></strong> llançat en un terminal.</p>
+<p>En sistemes <strong>Linux</strong>, es pot accedir a molta d'aquesta informació mitjançant el comandament <code>ip a</code> llançat en un terminal.</p>
 <p><center><img alt="ip a en Linux" src="../img/nic/ip%20a.png" width="100%" /></center></p>
-<p>Per altra banda, en sistemes <strong>Windows</strong>, aquesta informació està disponible mitjançant el comandament <strong><em>ipconfig /all</em></strong> del terminal de Windows (Símbol del sistema)</p>
+<p>Per altra banda, en sistemes <strong>Windows</strong>, aquesta informació està disponible mitjançant el comandament <code>ipconfig /all</code> del terminal de Windows (Símbol del sistema)</p>
 <h2 id="model-tcpip">Model TCP/IP</h2>
 <details class="question" open="open">
 <summary>Per què el model OSI no tingué èxit i el model TCP/IP sí?</summary>
@@ -1199,7 +1199,7 @@
     B --&gt; C{Medi lliure?};
     C --&gt; |No|B;
     C --&gt; |Si|D[Envia dades];
-    D --&gt; E{Colisió?};
+    D --&gt; E{Col.lisió?};
     E --&gt; |No|F[FI];
     E --&gt; |Si|G[Senyal JAM];
     G --&gt; H{Queden intents?};
