@@ -13,8 +13,6 @@
         <link rel="canonical" href="https://pgalera.github.io/xal/SMX1-XAL-5/">
       
       
-        <link rel="prev" href="../SMX1-XAL-4/">
-      
       
       
       <link rel="icon" href="../img/logojaume.png">
@@ -292,25 +290,6 @@
   
 
       
-        
-  
-  
-    
-  
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-    
-  
-  UD5
-
-      </a>
-    </li>
-  
-
-      
     </ul>
   </div>
 </nav>
@@ -440,85 +419,6 @@
   
 
     
-      
-      
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    UD5
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    UD5
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#el-sistema-operatiu-en-xarxa" class="md-nav__link">
-    El sistema operatiu en xarxa
-  </a>
-  
-    <nav class="md-nav" aria-label="El sistema operatiu en xarxa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#components-del-sistema" class="md-nav__link">
-    Components del sistema
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -567,6 +467,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#families-de-protocols-en-microsoft" class="md-nav__link">
+    Families de protocols en Microsoft
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#familia-de-protocols-tcpip" class="md-nav__link">
+    Familia de protocols TCP/IP
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -609,6 +523,67 @@
 <li><strong>Serveis en Xarxa</strong>: Un servei en un SO és una <strong>tasca que s'executa en segon plà (background) proporcionant una utilitat</strong> determinada als clients que realitzen peticions a l'esmentat servei. En Linux, aquestes tasques s'anomenen <strong>dimonis</strong>. Un servei de xarxa és aquella tasca a la que s'accedeix mitjançant un <strong><em>socket</em></strong> (protocol + port) i rep peticions a través de la xarxa. Per exemple, el <strong>servei d'accés a fitxers en xarxa</strong> o el <strong>servei d'impressió en xarxa</strong>.</li>
 <li><strong>Piles de protocols</strong>: Son les families de protocols que instalem en els Sistemes Operatius. Per exemple: TCP/IP, SPX/IPX, NetBeui i AppleTalk. De vegades s'instalen amb el software del SO i altres vegades és necessari que instalem altres piles de protocols o serveis de xarxa. </li>
 </ul>
+<h2 id="families-de-protocols-en-microsoft">Families de protocols en Microsoft</h2>
+<ul>
+<li>
+<p><strong>Protocol NetBEUI</strong>: sols pot emprar-se en xarxes locals perquè no és capaç d'encaminar-se per a dirigir-se a altres xarxes. Si la xarxa és xicoteta i no es pensa en un creixement a curt termini es podria emprar per donar suport per ser molt simple i fàcil d'emprar. De totes formes, es recomana TCP/IP.</p>
+</li>
+<li>
+<p><strong>Protocol IPX/SPX</strong>: protocol contruit per <em>Novell</em> per al seu sistema <em>NetWare</em>. Permet oferir un servei bàsic d'encaminament a xarxes xicotetes i mitjanes. Recomanable quan les estacions de treball de Microsoft han de conviure amb servidors NetWare.</p>
+</li>
+<li>
+<p><strong>Protocol TCP/IP</strong>: especialment dissenyat per poder encaminar-se entre distintes xarxes d'àrea local. Recomanable si la xarxa d'àrea local ha d'estar connectada a Internet o deu estar molt seggmentada.</p>
+</li>
+</ul>
+<h2 id="familia-de-protocols-tcpip">Familia de protocols TCP/IP</h2>
+<p>El model TCP/IP és un model <strong>més pràctic</strong> que el model OSI. Primerament es dissenyaren els protocols y després s'integraren per capes en l'arquitectura.</p>
+<p>El model TCP/IP és molt <strong>més simple</strong>, doncs redueix les capes de 7 a 4.</p>
+<table>
+<thead>
+<tr>
+<th>Capa OSI</th>
+<th>Capa TCP/IP</th>
+<th>Funció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicació</td>
+<td>Aplicació</td>
+<td>Conté protocols utilitzats per a les comunicacions de procés a procés, com HTTP, FTP, SMTP, etc.</td>
+</tr>
+<tr>
+<td>Presentació</td>
+<td>-</td>
+<td>Proporciona una representació comuna de les dades transferides entre els serveis de la capa d'aplicació, com la codificació, el xifratge i la compressió.</td>
+</tr>
+<tr>
+<td>Sessió</td>
+<td>-</td>
+<td>Gestiona l'establiment, el manteniment i la finalització de les sessions entre els processos d'aplicació.</td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>Transport</td>
+<td>Proporciona serveis de comunicació fiables i no fiables entre els hosts, com TCP i UDP.</td>
+</tr>
+<tr>
+<td>Xarxa</td>
+<td>Internet</td>
+<td>S'encarrega de l'enrutament dels paquets a través de la xarxa, utilitzant protocols com IP, ICMP i ARP.</td>
+</tr>
+<tr>
+<td>Enllaç de dades</td>
+<td>Host-xarxa</td>
+<td>S'encarrega de la transmissió de les dades entre els dispositius de la xarxa, utilitzant protocols com Ethernet, Wi-Fi i PPP.</td>
+</tr>
+<tr>
+<td>Física</td>
+<td>Host-xarxa</td>
+<td>S'encarrega de la conversió de les dades en senyals elèctrics, òptics o sense fils que es poden transmetre pel medi físic.</td>
+</tr>
+</tbody>
+</table>
 
 
   
@@ -635,30 +610,6 @@
       
         <footer class="md-footer">
   
-    
-      
-        
-      
-      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
-        
-          
-          <a href="../SMX1-XAL-4/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: UD4">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              <div class="md-ellipsis">
-                UD4
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
