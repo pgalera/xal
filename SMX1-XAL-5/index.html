@@ -301,9 +301,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -427,8 +425,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -479,6 +475,46 @@
     Familia de protocols TCP/IP
   </a>
   
+    <nav class="md-nav" aria-label="Familia de protocols TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol-ip" class="md-nav__link">
+    Protocol IP
+  </a>
+  
+    <nav class="md-nav" aria-label="Protocol IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversio-de-sistema-decimal-a-sistema-binari" class="md-nav__link">
+    Conversió de sistema decimal a sistema binari
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversio-de-sistema-binari-a-sistema-decimal" class="md-nav__link">
+    Conversió de sistema binari a sistema decimal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parts-de-ladreca-ip" class="md-nav__link">
+    Parts de l'adreça IP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -503,7 +539,7 @@
 <p>El sistema operatiu de <strong>cada node pot tenir instal·lats i configurats protocols de xarxa distints</strong>. Son aquests protocols de xarxa els qui seran capaços d'entendre i processar la informació que reba altre node.</p>
 <p>Actualment tots els sistemes operatius empren el protocol TCP/IP, el que facilita la interconnexió.</p>
 <ul>
-<li><strong>Microsoft Windows</strong>: tenia com a protocol de xarxa natiu <strong><em>NetBeui</em></strong> i era accessible a través de NetBIOS. Conserva aquesta interfície per compatibilitat, però el <strong>protocol natiu actual és TCP/IP</strong>.</li>
+<li><strong>Microsoft Windows</strong>: tenia com a protocol de xarxa natiu <strong><em>NetBeui</em></strong> i era accessible a través de NetBIOS. Conserva aquesta interfície per compatibilitat, però el <strong>protocol natiu actual é1 Bytes TCP/IP</strong>.</li>
 <li><strong>UNIX i distribucions GNU/Linux</strong>: GNU/Linux engloba a tots els sistemes operatius que seguisquen la tecnologia UNIX, però que es distribueixen sota llicència GP (GNU Public License). La tecnologia de <strong>xarxa nativa</strong> de Linux és <strong>TCP/IP</strong>, però per compatibilitat incorpora software amb les piles de protocols de <strong>Microsoft y Novell Netware</strong>.</li>
 <li><strong>Apple Mac OS X</strong>: Antigament emprava la pila de protocols <strong><em>AppleTalk</em></strong>, però actualment el seu <strong>protocol de xarxa natiu és TCP/IP</strong>.</li>
 </ul>
@@ -541,55 +577,96 @@
 <table>
 <thead>
 <tr>
-<th>Capa OSI</th>
-<th>Capa TCP/IP</th>
-<th>Funció</th>
+<th style="text-align: center;">Arquitectura OSI</th>
+<th style="text-align: center;">Arquitectura TCP/IP</th>
+<th style="text-align: center;">Funció</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Aplicació</td>
-<td>Aplicació</td>
-<td>Conté protocols utilitzats per a les comunicacions de procés a procés, com HTTP, FTP, SMTP, etc.</td>
+<td style="text-align: center;">Aplicació</td>
+<td style="text-align: center;">Aplicació</td>
+<td style="text-align: center;">Conté protocols utilitzats per a les comunicacions de procés a procés, com HTTP, FTP, SMTP, etc.</td>
 </tr>
 <tr>
-<td>Presentació</td>
-<td>-</td>
-<td>Proporciona una representació comuna de les dades transferides entre els serveis de la capa d'aplicació, com la codificació, el xifratge i la compressió.</td>
+<td style="text-align: center;">Presentació</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Proporciona una representació comuna de les dades transferides entre els serveis de la capa d'aplicació, com la codificació, el xifratge i la compressió.</td>
 </tr>
 <tr>
-<td>Sessió</td>
-<td>-</td>
-<td>Gestiona l'establiment, el manteniment i la finalització de les sessions entre els processos d'aplicació.</td>
+<td style="text-align: center;">Sessió</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Gestiona l'establiment, el manteniment i la finalització de les sessions entre els processos d'aplicació.</td>
 </tr>
 <tr>
-<td>Transport</td>
-<td>Transport</td>
-<td>Proporciona serveis de comunicació fiables i no fiables entre els hosts, com TCP i UDP.</td>
+<td style="text-align: center;">Transport</td>
+<td style="text-align: center;">Transport</td>
+<td style="text-align: center;">Proporciona serveis de comunicació fiables i no fiables entre els hosts, com TCP i UDP.</td>
 </tr>
 <tr>
-<td>Xarxa</td>
-<td>Internet</td>
-<td>S'encarrega de l'enrutament dels paquets a través de la xarxa, utilitzant protocols com IP, ICMP i ARP.</td>
+<td style="text-align: center;">Xarxa</td>
+<td style="text-align: center;">Internet</td>
+<td style="text-align: center;">S'encarrega de l'enrutament dels paquets a través de la xarxa, utilitzant protocols com IP, ICMP i ARP.</td>
 </tr>
 <tr>
-<td>Enllaç de dades</td>
-<td>Host-xarxa</td>
-<td>S'encarrega de la transmissió de les dades entre els dispositius de la xarxa, utilitzant protocols com Ethernet, Wi-Fi i PPP.</td>
+<td style="text-align: center;">Enllaç de dades</td>
+<td style="text-align: center;">Host-xarxa</td>
+<td style="text-align: center;">S'encarrega de la transmissió de les dades entre els dispositius de la xarxa, utilitzant protocols com Ethernet, Wi-Fi i PPP.</td>
 </tr>
 <tr>
-<td>Física</td>
-<td>Host-xarxa</td>
-<td>S'encarrega de la conversió de les dades en senyals elèctrics, òptics o sense fils que es poden transmetre pel medi físic.</td>
+<td style="text-align: center;">Física</td>
+<td style="text-align: center;">Host-xarxa</td>
+<td style="text-align: center;">S'encarrega de la conversió de les dades en senyals elèctrics, òptics o sense fils que es poden transmetre pel medi físic.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="protocol-ip">Protocol IP</h3>
+<ul>
+<li>El protocol IP realitza tasques bàsiques d'encaminament per a conseguir transportar dades desde un orige a un destí.</li>
+<li>L'<strong>orige i el destí poden estar en xarxes amb tecnologies totalment diferents</strong> i pot haver-hi diverses rutes possibles per el que deurà pendre decisions i triar la millor.</li>
+<li><strong>No hi ha seguretat a l'entrega</strong>.</li>
+<li><strong>No hi ha control d'errors</strong>.</li>
+<li><strong>Els paquets poden arribar desordenats</strong>.</li>
+<li>Els equips d'una xarxa tenen asociat u nnúmero d'<strong>adreça IP</strong> (adreça lògica, no confondre amb el número MAC de l'adaptador de xarxa que és l'adreça física) que permet identificar-los en tot Internet.</li>
+<li>L'<strong>adreça IP és un número binari de 32 bits</strong>. La seua representació en decimal està formada per 4 números separats per punts, cadascún dels quals pot pendre valors entre 0 i 255.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Adreça IP binària de 32 bits</p>
+<p>11000000 . 10101000 . 00100010 . 00001011 = 192.168.100.15</p>
+</div>
+<h4 id="conversio-de-sistema-decimal-a-sistema-binari">Conversió de sistema decimal a sistema binari</h4>
+<p>Per convertir un número decimal en binari es realitzen successives divisions entre 2 (base del sistema) i van recollint-se els residus de cada divisió <strong>en ordre invers</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple de pas de decimal a binari</p>
+<p><center><img alt="Decimal a Binari" src="../img/decBin/decabin.png" width="75%" /></center></p>
+</div>
+<h4 id="conversio-de-sistema-binari-a-sistema-decimal">Conversió de sistema binari a sistema decimal</h4>
+<p>Per tal de convertir un número binari a decimal haurem d'aplicar el <strong>Teorema fonamental de la numeració</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple de pas de binari a decimal</p>
+<p><center><img alt="Binari a Decimal" src="../img/decBin/binadec.png" width="75%" /></center></p>
+</div>
+<h4 id="parts-de-ladreca-ip">Parts de l'adreça IP</h4>
+<ul>
+<li>
+<p>L'adreça IP d'un dispositiu està <strong>estructurada en dues parts</strong>:</p>
+<ul>
+<li><strong>Identificador de xarxa</strong> a la que està connectat el dispositiu.</li>
+<li><strong>Identificador del dispositiu</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Aquesta estructura facilita l'encaminament dels routers</strong>, de forma que per encaminar un datagrama, els routers analitzaran l'dentificador de xarxa al qual pertany i ho encaminaran cap a ella. Una vegada dintre de la xarxa, el o els routers de dita xarxa tindran que analitzar l'indicador del host de destí per encaminar el datagrama fins ell.</p>
+</li>
+<li>
+<p>L'dentificador de xarxa pot tenir el tamany que es desitge, en funció del tamany de la xarxa.</p>
+</li>
+</ul>
+<p><center><img alt="Parts d'una IP" src="../img/ips/partsIP.png" width="75%" /></center></p>
 
 
   
 
-
-  
 
 
 
