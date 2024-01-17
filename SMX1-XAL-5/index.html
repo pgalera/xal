@@ -580,8 +580,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#protocol-tcp" class="md-nav__link">
+    Protocol TCP
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adrecament-ip-classful" class="md-nav__link">
+    Adreçament IP (Classful)
+  </a>
   
 </li>
       
@@ -710,8 +724,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#protocol-tcp" class="md-nav__link">
+    Protocol TCP
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adrecament-ip-classful" class="md-nav__link">
+    Adreçament IP (Classful)
+  </a>
   
 </li>
       
@@ -874,6 +902,35 @@
 </ul>
 </div>
 <h5 id="adreca-de-xarxa">Adreça de xarxa</h5>
+<p>L’adreça de la xarxa és la part de l’adreça IP que identifica la subxarxa on es troba el dispositiu. Com ja hem vist, la màscara de xarxa és un nombre que indica quants bits de l’adreça IP pertanyen a la xarxa i quants al host.</p>
+<p>Per calcular l’adreça de la xarxa, hem de fer una operació <strong>AND lògica</strong> entre l’adreça IP i la màscara de subxarxa. Això significa que si els dos bits són 1, el resultat és 1; si no, el resultat és 0.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple de càlcul d'adreça de xarxa</p>
+<p>Suposem que tenim l’adreça IP <strong><em>192.168.1.100</em></strong> i la màscara de subxarxa <strong><em>255.255.255.0</em></strong>. En binari, això seria:</p>
+<p>IP:   11000000.10101000.00000001.01100100</p>
+<p>Mask: 11111111.11111111.11111111.00000000</p>
+<p>Fent l’operació AND entre els dos, obtenim:</p>
+<p>Adreça de xarxa:  11000000.10101000.00000001.00000000</p>
+<p>Aquest és el resultat en binari de l’adreça de la xarxa. Si el convertim a decimal, obtenim:</p>
+<p>Adreça de xarxa:  192.168.1.0</p>
+</div>
+<h3 id="protocol-tcp">Protocol TCP</h3>
+<ul>
+<li>El TCP és un protocol per al control de la transmissió de les dades.</li>
+<li>Es dissenyà per realitzar connexions segures en xarxes insegures.</li>
+<li>Soluciona els problemes existents en IP:<ul>
+<li><strong>Aporta control d'errors</strong>.</li>
+<li><strong>Seguretat a l'entrega</strong>.</li>
+<li><strong>Control de fluxe. Els paquest arriben ordenats</strong>.</li>
+</ul>
+</li>
+<li>Es complementa de manera perfecta amb IP per <strong>aportar una comunicació de dades fiable i ordenada</strong>. Per això en ocasions es fa referència a TCP/IP com si fos un únic protocol, però realment en son dos.</li>
+<li>Els punts d'accés al servei en la capa de transport s'anomenen <strong><em>sockets, ports o connectors TCP/IP</em></strong>. Darrere de cada <em>socket</em> s'implanta un servei de xarxa. Per exemple, 80 és el port que identifica les peticions de xarxa cap a un servidor web.</li>
+<li>Quan algú a la xarxa requereix un servei, envia un missatge al <em>socket</em> o port que identifica el servei. Alguns serveis requereixen més d'un <em>socket</em> per al seu funcionament.</li>
+</ul>
+<h2 id="adrecament-ip-classful">Adreçament IP (Classful)</h2>
+<p>Per tal de facilitar la administració, els dissenyadors de l'esquema d'adreçament IP vàren determinar l'existència de 5 classes úniques: A, B, C, D i E.</p>
+<p><center><img alt="Classes d'IP" src="../img/ips/classesIP.png" width="100%" /></center></p>
 
 
   
