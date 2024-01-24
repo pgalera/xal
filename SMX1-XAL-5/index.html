@@ -674,6 +674,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#calcul-de-ladreca-de-broadcast" class="md-nav__link">
+    Càlcul de l'adreça de broadcast
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -889,6 +896,13 @@
         <li class="md-nav__item">
   <a href="#adreces-ip-especials" class="md-nav__link">
     Adreces IP especials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calcul-de-ladreca-de-broadcast" class="md-nav__link">
+    Càlcul de l'adreça de broadcast
   </a>
   
 </li>
@@ -1302,6 +1316,32 @@
 </tr>
 </tbody>
 </table>
+<h2 id="calcul-de-ladreca-de-broadcast">Càlcul de l'adreça de <em>broadcast</em></h2>
+<p>Per a calcular l'adreça de broadcast de la xarxa a la que pertany una adreça IP i la seua màscara, haurem de seguir aquests passos:</p>
+<ol>
+<li>
+<p>Converteix l'adreça IP i la màscara a format binari. Per exemple, si l'adreça IP és 192.168.1.100 i la màscara és 255.255.255.0, en binari serien:</p>
+<ul>
+<li>IP: 11000000.10101000.00000001.01100100</li>
+<li>Màscara: 11111111.11111111.11111111.00000000</li>
+</ul>
+</li>
+<li>
+<p>Fes una operació AND lògica entre l'adreça IP i la màscara per a obtenir l'adreça de xarxa. Aquesta operació consisteix a comparar els bits de cada octet i retornar 1 si tots dos són 1, o 0 en cas contrari. Per exemple:</p>
+<ul>
+<li>IP: 11000000.10101000.00000001.01100100</li>
+<li>Màscara: 11111111.11111111.11111111.00000000</li>
+<li>Xarxa: 11000000.10101000.00000001.00000000</li>
+</ul>
+</li>
+<li>
+<p>Per a trobar l'adreça de broadcast, has de canviar tots els bits de la part del host de l'adreça de xarxa per 1. La part del host són els bits que corresponen als 0 de la màscara. Per exemple, si l'adreça de xarxa és 192.168.1.0 i la màscara és 255.255.255.0, la part del host és l'últim octet, per tant, l'adreça de broadcast seria 192.168.1.255. En binari, seria:</p>
+<ul>
+<li>Xarxa: 11000000.10101000.00000001.00000000</li>
+<li>Broadcast: 11000000.10101000.00000001.11111111</li>
+</ul>
+</li>
+</ol>
 
 
   
