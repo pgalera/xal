@@ -645,6 +645,26 @@
     Adreces públiques i privades
   </a>
   
+    <nav class="md-nav" aria-label="Adreces públiques i privades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adreces-ip-privades-reservades" class="md-nav__link">
+    Adreces IP privades reservades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adreces-ip-estatiques-i-dinamiques" class="md-nav__link">
+    Adreces IP estàtiques i dinàmiques
+  </a>
+  
 </li>
       
     </ul>
@@ -835,6 +855,26 @@
         <li class="md-nav__item">
   <a href="#adreces-publiques-i-privades" class="md-nav__link">
     Adreces públiques i privades
+  </a>
+  
+    <nav class="md-nav" aria-label="Adreces públiques i privades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adreces-ip-privades-reservades" class="md-nav__link">
+    Adreces IP privades reservades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adreces-ip-estatiques-i-dinamiques" class="md-nav__link">
+    Adreces IP estàtiques i dinàmiques
   </a>
   
 </li>
@@ -1079,6 +1119,48 @@
 <li>Les adreces Ip de classe E estan reservades per a ús experimental en projectes d'investigació en la xarxa. S'utilitzen únicament per a futurs projectes i experimentacions.</li>
 </ul>
 <h2 id="adreces-publiques-i-privades">Adreces públiques i privades</h2>
+<p>Una <strong>adreça IP pública</strong> és aquella que <strong>identifica de forma única una connexió a Internet</strong>.</p>
+<p>Les <strong>adreces IP privades</strong> son adreces IP que s'utilitzen única i exclusivament en <strong>xarxes d'àrea local perquè no poden ixir a navegar per Internet</strong>, de fet, si un datagrama d'una xarxa privada ixquera accidentalment a Internet seria descartat perquè eixa adreça no existeix en Internet.</p>
+<p>Quan des d'una <strong>xarxa local s'ix a navegar per Internet</strong> haurem d'emprar un <strong>router amb tecnologia NAT</strong> (Network Address Translation). De forma resumida, el NAT farà que siga el router l'encarregar d'emmagatzemar l'adreça privada en una taula, asignar-li un identificador i substituir l'adreça d'orige per la pública del router. Quan se li conteste no tindrà més que consultar en la seua taula el valor de l'adreça provada corresponent a l'identificador i enviar-li a ella el datagrama de resposta.</p>
+<h3 id="adreces-ip-privades-reservades">Adreces IP privades reservades</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>TIPUS IP</strong></th>
+<th style="text-align: center;"><strong>Des de...</strong></th>
+<th style="text-align: center;"><strong>Fins a...</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">10.0.0.0</td>
+<td style="text-align: center;">10.255.255.255</td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">172.16.0.0</td>
+<td style="text-align: center;">172.31.255.255</td>
+</tr>
+<tr>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">192.168.0.0</td>
+<td style="text-align: center;">192.168.255.255</td>
+</tr>
+</tbody>
+</table>
+<h2 id="adreces-ip-estatiques-i-dinamiques">Adreces IP estàtiques i dinàmiques</h2>
+<ul>
+<li>
+<p><strong>ESTÀTIQUES (fixes)</strong>: Un host que es connecte a la xarxa amb una adreça IP estàtica, sempre ho farà amb la mateixa IP. Les adreces IP públiques estàtiques son les que utilitzen els servidors d'Internet amb l'objectiu d'estar sempre localitzables per els usuaris d'Internet. Aquestes adreces hi ha que contractar-les.</p>
+</li>
+<li>
+<p><strong>DINÀMIQUES</strong>: Un equip que es connecte a la xarxa mitjançant una adreça IP dinàmica, cada vegada ho farà amb una IP distinta. Els proveïdors d'Internet (ISP) empren adreces IP dinàmiques perquè tenen més clients que adreces IP (és molt improbable que tots es connecten al mateix temps).</p>
+</li>
+<li>
+<p>Les adreces IP emprades en Internet estan definides en la <strong><em>RFC1166</em></strong>.</p>
+</li>
+</ul>
 
 
   
