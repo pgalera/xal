@@ -597,6 +597,47 @@
     Adreçament IP (Classful)
   </a>
   
+    <nav class="md-nav" aria-label="Adreçament IP (Classful)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-a" class="md-nav__link">
+    Classes de una adreça IP: classe A
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-b" class="md-nav__link">
+    Classes de una adreça IP: classe B
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-c" class="md-nav__link">
+    Classes de una adreça IP: classe C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-d" class="md-nav__link">
+    Classes de una adreça IP: classe D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-e" class="md-nav__link">
+    Classes de una adreça IP: classe E
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -741,6 +782,47 @@
     Adreçament IP (Classful)
   </a>
   
+    <nav class="md-nav" aria-label="Adreçament IP (Classful)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-a" class="md-nav__link">
+    Classes de una adreça IP: classe A
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-b" class="md-nav__link">
+    Classes de una adreça IP: classe B
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-c" class="md-nav__link">
+    Classes de una adreça IP: classe C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-d" class="md-nav__link">
+    Classes de una adreça IP: classe D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-una-adreca-ip-classe-e" class="md-nav__link">
+    Classes de una adreça IP: classe E
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -877,7 +959,7 @@
 <li>
 <p>L'adreça IP d'un dispositiu està <strong>estructurada en dues parts</strong>:</p>
 <ul>
-<li><strong>Identificador de xarxa</strong> a la que està connectat el dispositiu.</li>
+<li><strong>Identificador de xarxa</strong> a la que està connectat el dispositiu</li>
 <li><strong>Identificador del dispositiu</strong></li>
 </ul>
 </li>
@@ -931,6 +1013,55 @@
 <h2 id="adrecament-ip-classful">Adreçament IP (Classful)</h2>
 <p>Per tal de facilitar la administració, els dissenyadors de l'esquema d'adreçament IP vàren determinar l'existència de 5 classes úniques: A, B, C, D i E.</p>
 <p><center><img alt="Classes d'IP" src="../img/ips/classesIP.png" width="100%" /></center></p>
+<h3 id="classes-de-una-adreca-ip-classe-a">Classes de una adreça IP: classe A</h3>
+<ul>
+<li>
+<p>Una <strong>adreça IP de classe A</strong> sempre té el primer bit (el que es troba més a l'esquerra) a '0', és a dir, <strong>el primer octet té un valor decimal entre 0 i 126</strong>. La xarxa 127.0.0.0 no pot emprar-se per estar reservada per a proves de l'adaptador de xarxa.</p>
+</li>
+<li>
+<p>Les adreces IP de classe A empren solament els <strong>8 primers bits per identificar la part de xarxa</strong> de l'adreça, la resta <strong><em>(tres octets) s'utilitzen per especificar la part del host</em></strong> de l'adreça.</p>
+</li>
+<li>
+<p>Les <strong><em>adreces IP de classe A que NO es poden utilitzar</em></strong> son:</p>
+<ul>
+<li>Una <strong>primera adreça IP per a l'identificador de la xarxa</strong> (primer octet amb el valor de la xarxa corresponent i la resta d'octets amb els seus bits a valor zero).</li>
+<li>Una <strong>adreça IP per a difussió o <em>broadcast</em></strong>, que tindrà el primer octet amb el valor de la xarxa i la resta d'octets amb els bits a valor 1, és a doir 255 en decimal.</li>
+</ul>
+</li>
+<li>
+<p>La <strong>máscara de xarxa per defecte</strong> de les adreces IP de classe A son <strong>255.0.0.0</strong></p>
+</li>
+</ul>
+<h3 id="classes-de-una-adreca-ip-classe-b">Classes de una adreça IP: classe B</h3>
+<ul>
+<li>
+<p>Una <strong>adreça IP de classe B</strong> sempre té els seus dos primers bits a valor binari '10', és a dir, <strong>el primer octet tindrà un valor decimal entre 128 i 191</strong>.</p>
+</li>
+<li>
+<p>La <strong>máscara de xarxa per defecte</strong> de les adreces IP de classe B son <strong>255.255.0.0</strong></p>
+</li>
+<li>
+<p>Les adreces de classe B utilitzen els <strong>dos primers octets per a l'identificador de xarxa</strong>, i els <strong>dos últims octets per a l'identificador de host</strong>. En una xarxa de classe B existiran 65.536 IPs distintes, de les quals dues estan reservades per a la xarxa (bits de host TOTS a zero) i per al <em>broadcast</em> (bits de host TOTS a uns). Per tant, 65534 nombre màxima de connexions.</p>
+</li>
+</ul>
+<h3 id="classes-de-una-adreca-ip-classe-c">Classes de una adreça IP: classe C</h3>
+<ul>
+<li>
+<p>Una adreça de classe C sempre té els seus tres primers bits al valor binari '110', és a dir, <strong>el primer octet tindrà un valor decimal entre 192 i 223</strong>.</p>
+</li>
+<li>
+<p>La <strong>màscara de xarxa per defecte</strong> de les adreces IP de classe C és <strong>255.255.255.0</strong></p>
+</li>
+<li>
+<p>Les adreces de classe C utilitzen els <strong>tres primers octets per a l'identificador de xarxa</strong> i l'<strong>últim octet per a l'identificador de host</strong>. En una xarxa classe C existiran un màxim de 256 IPs distintes, de les quals dues estan reservades (xarxa i <em>broadcast</em>), per tant tindre 254 connexions reals.</p>
+</li>
+</ul>
+<h3 id="classes-de-una-adreca-ip-classe-d">Classes de una adreça IP: classe D</h3>
+<ul>
+<li>Les adreces IP de classe D son adreces <strong>multicast o multienviament</strong> que s'utilitzen únicament <strong>el primer octet com identificatiu de xarxa</strong> i els <strong>tres octets restants</strong> s'utilitzen com <strong>identificatiu de grup de host</strong>.</li>
+</ul>
+<h3 id="classes-de-una-adreca-ip-classe-e">Classes de una adreça IP: classe E</h3>
+<p>Les adreces Ip de classe E estan reservades per a ús experimental en projectes d'investigació en la xarxa. S'utilitzen únicament per a futurs projectes i experimentacions.</p>
 
 
   
