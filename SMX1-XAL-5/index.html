@@ -667,6 +667,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#adreces-ip-especials" class="md-nav__link">
+    Adreces IP especials
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -875,6 +882,13 @@
         <li class="md-nav__item">
   <a href="#adreces-ip-estatiques-i-dinamiques" class="md-nav__link">
     Adreces IP estàtiques i dinàmiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adreces-ip-especials" class="md-nav__link">
+    Adreces IP especials
   </a>
   
 </li>
@@ -1161,6 +1175,133 @@
 <p>Les adreces IP emprades en Internet estan definides en la <strong><em>RFC1166</em></strong>.</p>
 </li>
 </ul>
+<h2 id="adreces-ip-especials">Adreces IP especials</h2>
+<p>Aquestes adreces són especials i no es poden passar fora de la xarxa local o tenen un ús específic:</p>
+<table>
+<thead>
+<tr>
+<th>Bloc d'adreces</th>
+<th>Rang</th>
+<th>Número d'adreces</th>
+<th>Abast</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0.0.0/8</td>
+<td>0.0.0.0–0.255.255.255</td>
+<td>16.777.216</td>
+<td>Software</td>
+<td>Xarxa actual (només vàlid com a adreça d'origen). ³</td>
+</tr>
+<tr>
+<td>10.0.0.0/8</td>
+<td>10.0.0.0–10.255.255.255</td>
+<td>16.777.216</td>
+<td>Xarxa privada</td>
+<td>Utilitzat per a les comunicacions locals dins d'una xarxa privada. ⁴</td>
+</tr>
+<tr>
+<td>100.64.0.0/10</td>
+<td>100.64.0.0–100.127.255.255</td>
+<td>4.194.304</td>
+<td>Xarxa privada</td>
+<td>Espai d'adreces compartit per a les comunicacions entre un proveïdor de serveis i els seus subscriptors quan s'utilitza un NAT de nivell d'operador.</td>
+</tr>
+<tr>
+<td>127.0.0.0/8</td>
+<td>127.0.0.0–127.255.255.255</td>
+<td>16.777.216</td>
+<td>Host</td>
+<td>S'utilitza per a les adreces de loopback. ³</td>
+</tr>
+<tr>
+<td>169.254.0.0/16</td>
+<td>169.254.0.0–169.254.255.255</td>
+<td>65.536</td>
+<td>Subxarxa</td>
+<td>S'utilitza per a les adreces de enllaç local entre dos hosts en un sol enllaç quan d'altra manera no s'especifica cap adreça IP, com normalment s'hauria recuperat d'un servidor DHCP.</td>
+</tr>
+<tr>
+<td>172.16.0.0/12</td>
+<td>172.16.0.0–172.31.255.255</td>
+<td>1.048.576</td>
+<td>Xarxa privada</td>
+<td>Utilitzat per a les comunicacions locals dins d'una xarxa privada. ⁴</td>
+</tr>
+<tr>
+<td>192.0.0.0/24</td>
+<td>192.0.0.0–192.0.0.255</td>
+<td>256</td>
+<td>Xarxa privada</td>
+<td>Assignacions de protocol de l'IETF. ³</td>
+</tr>
+<tr>
+<td>192.0.2.0/24</td>
+<td>192.0.2.0–192.0.2.255</td>
+<td>256</td>
+<td>Documentació</td>
+<td>Assignat com a TEST-NET-1, per a documentació i exemples.</td>
+</tr>
+<tr>
+<td>192.88.99.0/24</td>
+<td>192.88.99.0–192.88.99.255</td>
+<td>256</td>
+<td>Internet</td>
+<td>Reservada.  Previament utilitzada per a relay IPv6 a IPv4.  (incloent el bloc d'adreces IPv6 2002::/16).</td>
+</tr>
+<tr>
+<td>192.168.0.0/16</td>
+<td>192.168.0.0–192.168.255.255</td>
+<td>65.536</td>
+<td>Xarxa privada</td>
+<td>Utilitzat per a les comunicacions locals dins d'una xarxa privada. ⁴</td>
+</tr>
+<tr>
+<td>198.18.0.0/15</td>
+<td>198.18.0.0–198.19.255.255</td>
+<td>131.072</td>
+<td>Xarxa privada</td>
+<td>Utilitzat per a proves de rendiment entre dos dispositius separats.</td>
+</tr>
+<tr>
+<td>198.51.100.0/24</td>
+<td>198.51.100.0–198.51.100.255</td>
+<td>256</td>
+<td>Documentació</td>
+<td>Assignat com a TEST-NET-2, per a documentació i exemples.</td>
+</tr>
+<tr>
+<td>203.0.113.0/24</td>
+<td>203.0.113.0–203.0.113.255</td>
+<td>256</td>
+<td>Documentació</td>
+<td>Assignat com a TEST-NET-3, per a documentació i exemples.</td>
+</tr>
+<tr>
+<td>224.0.0.0/4</td>
+<td>224.0.0.0–239.255.255.255</td>
+<td>268.435.456</td>
+<td>Internet</td>
+<td>Adreces multicast.</td>
+</tr>
+<tr>
+<td>240.0.0.0/4</td>
+<td>240.0.0.0–255.255.255.254</td>
+<td>268.435.456</td>
+<td>Internet</td>
+<td>Reservada per a usos futurs.</td>
+</tr>
+<tr>
+<td>255.255.255.255/32</td>
+<td>255.255.255.255</td>
+<td>1</td>
+<td>Subxarxa</td>
+<td>Adreça de difusió limitada.</td>
+</tr>
+</tbody>
+</table>
 
 
   
