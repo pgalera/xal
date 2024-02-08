@@ -732,9 +732,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subneting" class="md-nav__link">
+  <a href="#adrecament-classful" class="md-nav__link">
     <span class="md-ellipsis">
-      Subneting
+      Adreçament Classful
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adreçament Classful">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subnetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subnetting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adrecament-classless" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adreçament Classless
     </span>
   </a>
   
@@ -1011,9 +1035,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subneting" class="md-nav__link">
+  <a href="#adrecament-classful" class="md-nav__link">
     <span class="md-ellipsis">
-      Subneting
+      Adreçament Classful
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adreçament Classful">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subnetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subnetting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adrecament-classless" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adreçament Classless
     </span>
   </a>
   
@@ -1454,7 +1502,71 @@
 </ul>
 </li>
 </ol>
-<h2 id="subneting">Subneting</h2>
+<h2 id="adrecament-classful">Adreçament <em>Classful</em></h2>
+<p>L'adreçament basat en classes (A, B, C, D i E) i les seues màscares de xarxa predeterminades és conegut com <strong>adreçament <em>classful</em></strong>. Quan fou <strong>creat a l'any 1981</strong> Internet era una xarxa molt petita i nungú imaginava que arribaria a tindre la quantitat d'equips que té actualment.</p>
+<p>De fet, abans de l'adreçament <em>classful</em>, a les primeres etapes del desenvolupament del protocol d'Internet, les adreces IP eren concebudes com un primer octet (8 bits) per dessignar la xarxa i els altres tres octets següents per als equips dins de eixa xarxa.</p>
+<p>L'adreçament <em>classful</em> en el seu dia va aportar diversos <strong>avantatges</strong>:</p>
+<ul>
+<li>
+<p><strong>Facilitat i claredat</strong>: Hi ha <strong>poques classes</strong> per tirar i és molt fàcild'entendre com es divideixen les adreces. La distinció entre classes és clara i evident. Les divisions entre els ID de xarxa i l'ID de hosts a les classes A, B i C estan als límits de l'octet i això fa fàcil dir quin és l'identificador de qualsevol adreça.</p>
+</li>
+<li>
+<p><strong>Flexibilitat raonable</strong>: Els tres nivells de <strong>granularitat</strong> coincideixen raonablement bé amb els tamanys de les organitzacions (grans, mitjanes i petites). </p>
+</li>
+<li>
+<p><strong>Facilitat d'enrutament</strong>: La classe de l'adreça va codificada just en l'adreça (primers bits del primer octet) perquè siga <strong>fàcil per als routers</strong> saber quina part de qualsevol adreça és l'<strong>identificador de xarxa i quina l'identificador de host</strong>. No ho ha necessitat d'informació anexa, com la màscara de subxarxa.</p>
+</li>
+<li>
+<p><strong>Adreces reservades</strong>: Algunes adreces estan reservades per a <strong>propòsits especials</strong>. Açò inclou no sols les classes D i E, també rangs especials d'adreces reservades per a l'adreçament "privat".</p>
+</li>
+</ul>
+<p>Ningú esperava que Internet arribaria a ser una xarxa amb la magnitut actual. Açò ha produït que siguen més evidents els <strong>problemes</strong> de l'adreçament <em>classful</em>:</p>
+<ul>
+<li>
+<p><strong>Falta de flexibilitat</strong>: Quan se li assigna a una empresa una adreça de xarxa (A, B o C) estem <strong>limitant e un nombre d'oridnadors concret per a la nostra xarxa</strong> (A = 2²⁴-2 = 16.777.214, B = 2¹⁶-2 = 65.534, C = 2⁸-2 = 254) que no té el perquè de coincidir amb les necessitats reals de l'empresa.</p>
+</li>
+<li>
+<p><strong>Ús ineficient de l'espai d'adreces</strong>: L'existència de sols tres tamanys de bloc de classes (A, B i C) dona peu a la <strong>pèrdua d'espai d'adreces IP</strong>.</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Desaprofitament d'adreces</p>
+<p>Si tens una empresa amb 5.000 ordenadors necessites una adreça de xarxa de classe B per poder incorporar-los tots i desperdiciaries 60.000 adreces de les 65.000 de la xarxa de classe B.</p>
+<p><center><img alt="Desaprofitament d'IPs" src="../img/ips/desaprofitament.png" width="75%" /></center></p>
+</div>
+<ul>
+<li><strong>Baixa granularitat</strong>: Tres tamanys (A, B i C) semblen correctes, en principi, però <strong>les diferències entre els tamanys son enormes</strong>. La diferència de tamany entre les xarxes de classe C i classe B és massa gran (un bot de 254 hosts fins a més de 65.000). Per atra banda, <strong>quantes empreses necessiten una classe A (16 milions d'adreces IP)?</strong>.</li>
+</ul>
+<h3 id="subnetting"><em>Subnetting</em></h3>
+<ul>
+<li>
+<p>En el sistema d'adreçament de subxarxes <em>classful</em>, la divisió xarxa/host de l'adreça IP es converteix en un sistema de tres nivells (A, B i C). Si emprem una adreça de classe C tenim 24 bits per a l'ID de xarxa i els 8 bits restants per a l'ID del host.</p>
+</li>
+<li>
+<p>Emprant el <strong>subnetting</strong> podem dividir la nostra xarxa en diverses subxarxes:</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple subnetting</p>
+<p><center><img alt="Exemple subnetting" src="../img/ips/subnetting.png" width="80%" /></center></p>
+<p>Al cas anterior de l'adreça de classe C, l'ID de host pot dividir-se en, per exemple, 2 bits per a un ID de subxarxa i 6 per a l'ID del host. Açò permetrà tindre 2² = 4 subxarxes (00, 01, 10 i 11).</p>
+<p>La màscara de subxarxa seria 26 '1' seguits de 6 '0', els zeros indiquen quina part de l'adreça és el host. En la notació decimal amb punts, açò seria 255.255.255.192</p>
+</div>
+<ul>
+<li>Mitjançant el <em>subnetting</em> podem dividir una adreça IP de la classe que siga en diverses subxarxes depenent d eles nostres necessitats.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple subnetting. Descomposició en subxarxes</p>
+<p>A continuació podem veure les 6 primeres subxares de les 16 en les quals s'ha descomposat una <strong>adreça de classe C emprant 4 bits per <em>subnetting</em></strong>:</p>
+<p><center><img alt="Exemple descomposició subxarxes" src="../img/ips/exemple_subnetting.png" width="100%" /></center></p>
+</div>
+<h2 id="adrecament-classless">Adreçament <em>Classless</em></h2>
+<p>Per tal de solucionar la problemàtica de l'adreçament IP amb classes (Classful), naix l'adreçament IP <strong>sense classes</strong> o <strong>CIDR</strong>.</p>
+<p>CIDR, en essència, aplica el mateix que el <em>subnetting</em> però ampliant el concepte.</p>
+<p>En CIDR <strong>no existeixen classes</strong> A, B o C. El valor de l'adreça IP no implica ninguna màscara implícita, com ocorria abans amb els primers bits de l'adreça. <strong>Tota definició d'una xarxa IP deu anar acompanyada d'una adreça  de màscara</strong> que concreta la xarxa.</p>
+<p>Per exemple, quan parlem en termes de CIDR no podem afirmar que l'adreça 172.17.25.12 pertany a la xarxa 172.17.0.0 si no ve especificada com 172.17.25.12/16</p>
+<p>En CIDR ja no s'empra el terme "classe d'una xarxa", perquè no hi han classes com a tal, sinò xarxes definides per el sufix que acompanya a l'adreça de xarxa.</p>
+<p>Com es pot entendre en CIDR tampoc podem aplicar el concepte de <em>subnetting</em> tradicional. CIDR defineix una jerarquia de xarxes, cadascuna amb el seu tamany específic, i que algunes poden encaixar dintre d'altres.</p>
 
 
 
