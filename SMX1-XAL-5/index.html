@@ -22,7 +22,7 @@
     
     
       
-        <title>UD5. Instal·lació i configuració d'equis de xarxa - Xarxes Locals</title>
+        <title>UD5. Instal·lació i configuració d'equips de xarxa - Xarxes Locals</title>
       
     
     
@@ -64,6 +64,32 @@
 
     
     
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="UD5. Instal·lació i configuració d'equips de xarxa - Xarxes Locals" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://pgalera.github.io/xal/assets/images/social/SMX1-XAL-5.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://pgalera.github.io/xal/SMX1-XAL-5/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="UD5. Instal·lació i configuració d'equips de xarxa - Xarxes Locals" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://pgalera.github.io/xal/assets/images/social/SMX1-XAL-5.png" >
+      
+    
     
   </head>
   
@@ -84,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ud5-installacio-i-configuracio-dequis-de-xarxa" class="md-skip">
+        <a href="#ud5-installacio-i-configuracio-dequips-de-xarxa" class="md-skip">
           Salta el contingut
         </a>
       
@@ -117,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD5. Instal·lació i configuració d'equis de xarxa
+              UD5. Instal·lació i configuració d'equips de xarxa
             
           </span>
         </div>
@@ -1082,7 +1108,7 @@
                   
 
 
-<h1 id="ud5-installacio-i-configuracio-dequis-de-xarxa">UD5. Instal·lació i configuració d'equis de xarxa</h1>
+<h1 id="ud5-installacio-i-configuracio-dequips-de-xarxa">UD5. Instal·lació i configuració d'equips de xarxa</h1>
 <h2 id="el-sistema-operatiu-en-xarxa">El sistema operatiu en xarxa</h2>
 <p>La xarxa està formada per nodes i gran <strong>part de la funcionalitat d'una xarxa depen del software de xarxa que està instal·lat als seus nodes</strong>.</p>
 <p>Al mateix temps, cadascun d'aquests nodes <strong>pot tenir corrent un sistema operatiu distint</strong>.</p>
@@ -1567,6 +1593,7 @@
 <p>Per exemple, quan parlem en termes de CIDR no podem afirmar que l'adreça 172.17.25.12 pertany a la xarxa 172.17.0.0 si no ve especificada com 172.17.25.12/16</p>
 <p>En CIDR ja no s'empra el terme "classe d'una xarxa", perquè no hi han classes com a tal, sinò xarxes definides per el sufix que acompanya a l'adreça de xarxa.</p>
 <p>Com es pot entendre en CIDR tampoc podem aplicar el concepte de <em>subnetting</em> tradicional. CIDR defineix una jerarquia de xarxes, cadascuna amb el seu tamany específic, i que algunes poden encaixar dintre d'altres.</p>
+<p>CIDR va fer seua la nomenclatura de barra invertida, del tipus /xx (on xx representa el bits marcats a '1' de la màscara en binari) i està basada en el que es va denominar <strong><em>variable-lenght subnet masking (VLSM)</em></strong>.</p>
 
 
 
@@ -1725,7 +1752,7 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.footer", "navigation.top", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.footer", "navigation.top", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
     
     
       <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
