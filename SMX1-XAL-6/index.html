@@ -892,7 +892,7 @@
 <p><strong>Cada MV en mode NAT</strong> tindrà el seu propi router, per la qual cosa <strong>estaran en xarxes aïllades</strong>, el que implica que, per defecte, les MMVV que tenen la seua targeta en mode NAT <strong>no poden veure's entre elles</strong>.</p>
 <p>L'adreça que el router (intern) serveix (DHCP) va a dependre del número de targeta de xarxa que estiga assignat en mode NAT. Les 8 targetes de xarxa que VB permet a cada MV van numerades del 0 al 7 i les adreces de xarxa dels routers segueixen el patró <strong>10.0.[x + 2].0/24</strong>, on x és el número de la targeta de xarxa (10.0.2.0/24, 10.0.3.0/24, ... , 10.0.9.0/24 ). L'adreça IP de la targeta de xarxa serà 10.0.x+2.<strong>15</strong>/24 i la porta d'enllaç (router intern) 10.0.x+2.<strong>2</strong>/24.</p>
 <details class="tip">
-<summary>Canvi d'areçament NAT en VirtualBox</summary>
+<summary>Canvi d'adreçament NAT en VirtualBox</summary>
 <p>Pot ser interessant <strong>canviar la numeració</strong> motivats per el problema que estiguem resolent en un moment donat, i per fer-ho és necessari recòrrer al comandament <strong><em>VBoxManage</em></strong> de la següent forma:</p>
 <p><code>VBoxManage modifyvm "Nom_de_la_MV" --natnet1 192.168.0.0/16</code></p>
 <p>Amb l'ordre anterior, l'adaptador de xarxa número 0 (--natnet1) de la MV "Nom_de_la_MV" pendrà l'adreça de xarxa 192.168.0.15/16 i la porta d'enllaç 192.168.0.2/16.</p>
