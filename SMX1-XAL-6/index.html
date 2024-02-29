@@ -659,6 +659,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#xarxa-nat-en-virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xarxa NAT en VirtualBox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Xarxa NAT en VirtualBox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-duna-xarxa-nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'una xarxa NAT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -797,6 +821,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#xarxa-nat-en-virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xarxa NAT en VirtualBox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Xarxa NAT en VirtualBox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-duna-xarxa-nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'una xarxa NAT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -884,7 +932,7 @@
 <div class="admonition info">
 <p class="admonition-title">Per a què serveix el protocol NAT?</p>
 <p><strong>NAT</strong> és un protocol que fou creat per traduir les IPs privades de la xarxa en una IP pública perquè la xarxa poguera enviar paquets a l'exterior; i traduir després eixa IP pública, de nou a la IP privada de l'equip que havia enviat el paquet, per tal que poguera rebre'l una vegada arribada la resposta.</p>
-<p><center><img alt="Esquema de NAT" src="../img/vbox/nat.png" width="75%" /></center></p>
+<p><center><img alt="Esquema de NAT" src="../img/vbox/nat.png" width="66%" /></center></p>
 </div>
 <h3 id="nat-en-virtualbox">NAT en VirtualBox</h3>
 <p>A VB és el <strong>mode per defecte</strong> de la targeta de xarxa virtual. Amb aquesta opció el servei virtualitzat utilitza la targeta de xarxa de la <strong><em>màquina real (amfitrió)</em></strong> per navegar. En mode NAT, VB col·loca un <strong><em>router entre l'amfitrió (cap on fa NAT) i la màquina virtual</em></strong>.</p>
@@ -921,6 +969,16 @@
 <li><strong>VirtualBox permet configurar el servei DHCP en diverses modalitats: NAT, Xarxa Nat, Xarxa sols-amfitrió</strong>.</li>
 </ul>
 </div>
+<h3 id="xarxa-nat-en-virtualbox">Xarxa NAT en VirtualBox</h3>
+<p>Funciona com el router de la nostra casa, és a dir, **els equips que estiguen dins de la mateixa Xarxa NAT podran comunicar-se entre ells, i esta és la diferència amb el mode NAT vist anteriorment, el qual sempre contruia una xarxa amb un únic equip i no de dicersos com ara és el cas.</p>
+<p><center><img alt="Esquema de xarxa NAT" src="../img/vbox/xarxa-NAT.png" width="66%" /></center></p>
+<h4 id="creacio-duna-xarxa-nat">Creació d'una xarxa NAT</h4>
+<p>Podem fer-ho de dues formes:</p>
+<ul>
+<li>Des de l'intèrpret de comandes escriure'm <code>VBoxManage natnetwork add --netname CASA --network 192.168.0.0/24</code>.</li>
+<li>Des del menú del VB (les imatges corresponen a la versió 6 de VB): "Fitxer --&gt; Preferències --&gt; Xarxa"</li>
+</ul>
+<p><center><img alt="xarxa NAT en entorn gràfic VB" src="../img/vbox/xarxa-NAT-gf.png" width="100%" /></center></p>
 
 
 
