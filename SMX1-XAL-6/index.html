@@ -910,6 +910,17 @@
 <p>El redireccionament de ports es pot fer també de forma gràfica mitjançant la secció de "Xarxa de la MV".</p>
 <p><center><img alt="Reenviament de ports NAT de manera gràfica" src="../img/vbox/reenviament_ports_nat.png" width="100%" /></center></p>
 </details>
+<div class="admonition info">
+<p class="admonition-title">Per a què serveix el protocol DHCP?</p>
+<ul>
+<li>DHCP és un protocol que es <strong>configura en servidors</strong>.</li>
+<li>Un servidor té un <strong>llistat d'adreces IP dinàmiques i les va assignant</strong> als clients conforme aquestes van quedant lliures, sabent en tot moment qui ha estat en posessií d'eixes IP, quan de temps la ha tingut i qui se li ha assignat després.</li>
+<li>Així <strong>els clients d'un xarxa IP poden aconseguir els seus paràmetres de configuració automàticament</strong>.</li>
+<li>Aquest protocol es va publicar en octubre de 1993 i la seua implementació actual està en RFC 2131.</li>
+<li>Per a DHCPv6 es publica el RFC 331.</li>
+<li><strong>VirtualBox permet configurar el servei DHCP en diverses modalitats: NAT, Xarxa Nat, Xarxa sols-amfitrió</strong>.</li>
+</ul>
+</div>
 
 
 
