@@ -683,6 +683,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#adaptador-pont-en-virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptador pont en VirtualBox
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -845,6 +854,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#adaptador-pont-en-virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptador pont en VirtualBox
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -978,7 +996,28 @@
 <li>Des de l'intèrpret de comandes escriure'm <code>VBoxManage natnetwork add --netname CASA --network 192.168.0.0/24</code>.</li>
 <li>Des del menú del VB (les imatges corresponen a la versió 6 de VB): "Fitxer --&gt; Preferències --&gt; Xarxa"</li>
 </ul>
-<p><center><img alt="xarxa NAT en entorn gràfic VB" src="../img/vbox/xarxa-NAT-gf.png" width="100%" /></center></p>
+<p><center><img alt="xarxa NAT en entorn gràfic VB" src="../img/vbox/xarxa-NAT-gf.png" width="75%" /></center></p>
+<p>Des de l'entorn gràfic podrem, també, configurar el <strong>reenviament de ports</strong>.</p>
+<p>Podem <strong>llistar la informació de les xarxaes NAT</strong> disponibles i així comprovar els paràmetres que acabem de crear:</p>
+<p><code>VBoxManage list natnets</code></p>
+<p>Com podem veure, sols hi ha en aquest moment una única xarxa NAT anomenada <strong>CASA</strong> i podem destacar la següent informació:</p>
+<p><center><img alt="LListat de xarxes NAT al VB amb VBoxManage" src="../img/vbox/list-natnets.png" width="50%" /></center></p>
+<p>El <strong>servidor DHCP pot detindre's o activar-se</strong> de manera independent, amb els següents comandaments:</p>
+<p><code>VBoxManage natnetwork modify --netname CASA --dhcp off</code></p>
+<p><code>VBoxManage natnetwork modify --netname CASA --dhcp on</code></p>
+<p><strong>La xarxa NAT pot detindre's i seria com apagar el router</strong>, és a dir, la xarxa quedaria sense eixida a l'exterior encara que tindria connexió entre els equips connectats a la mateixa xarxa NAT:</p>
+<p><code>VBoxManage natnetwork stop --netname CASA</code></p>
+<p><code>VBoxManage natnetwork start --netname CASA</code></p>
+<p>Finalment, per <strong>eliminar la xarxa NAT</strong> executariem:</p>
+<p><code>VBoxManage natnetwork remove --netname CASA</code></p>
+<p>Aquestes opcions també <strong>poden fer-se des de l'entonr gràfic de VB</strong>.</p>
+<h3 id="adaptador-pont-en-virtualbox">Adaptador pont en VirtualBox</h3>
+<p>El mode "Adaptador pont" <strong>simula que la targeta virtual està connectada al mateix switch que la targeta física de l'amfitrió</strong>, per tant, la MV va a comportar-se com si fòs un equip més dins de la mateixa xarxa física en la que està l'equip amfitrió. Per tant, si l'amfitrió obté una adreça IP per DHCP, el host també la conseguirà. L'esquema de xarxa seria el següent:</p>
+<p><center><img alt="Esquema de xarxa del mode pont" src="../img/vbox/esquema-pont.png" width="75%" /></center></p>
+<div class="admonition info">
+<p class="admonition-title">Com aconsegueix VB simular-ho?</p>
+<p>Un <strong>bridge</strong> afig un nivell d'inteligència a una connexió entre xarxes. Connecta dos segments de xarxes iguals o distints. Podem veure un <em>bridge</em> com un classificador de correu que mira les adreces dels paquets i els col·loca a la <strong>xarxa</strong> adequada.</p>
+</div>
 
 
 
