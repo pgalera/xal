@@ -701,6 +701,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#adaptador-sols-amfitrio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptador sols-amfitrió
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netplan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netplan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Netplan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-targeta-de-xarxa-per-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar targeta de xarxa per DHCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-targeta-de-xarxa-amb-ip-fixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar targeta de xarxa amb IP fixa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-les-configuracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicar les configuracions
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -881,6 +932,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#adaptador-sols-amfitrio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptador sols-amfitrió
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netplan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netplan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Netplan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-targeta-de-xarxa-per-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar targeta de xarxa per DHCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-targeta-de-xarxa-amb-ip-fixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar targeta de xarxa amb IP fixa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-les-configuracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicar les configuracions
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1043,6 +1145,114 @@
 <p><center><img alt="xarxa interna en VB amb connexió a Internet" src="../img/vbox/xarxa-interna-amb-eixida.png" width="50%" /></center></p>
 <p>Les xarxes internes de VB s'identifiquen a trevés d'un nom i <strong>totes les MMVV que tinguen una targeta en mode xarxa interna amb el mateix nom formaran una única xarxa</strong>. El nom de la xarxa interna s'especifica després de triar el mode; si no s'especifica, s'emprarà la xarxa interna per defecte de VB, anomenada <strong><em>intnet</em></strong>.</p>
 <p><center><img alt="Configuració de xarxa interna en VB" src="../img/vbox/xarxa-interna-VB.png" width="75%" /></center></p>
+<h3 id="adaptador-sols-amfitrio">Adaptador sols-amfitrió</h3>
+<p>El mode "sols-amfitrió" s'empra per <strong>crear un xarxa interna a la que pertanyerà també l'equip amfitrió, cosa que no succeeix al mode "xarxa interna"</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Justificació</p>
+<p>La connexió directa en una mateixa xarxa, de l'amfitrió amb una o més MMVV, ha de fer-se emprant el "mode pont" el qual necessita per funcionar, que el cable físic de xarxa estiga connectat a la targeta de xarxa de l'amfitrió. En cas contrari, és com si estiguera apagat el switch que connecta a l'amfitrió amb les MMVV, i per tant, no existeix connexió entre elles, ni amb l'amfitrió. Si estiguéssem en una <strong>situació en la qual no tinguérem connexió de xarxa</strong>, no podriem treballa amb la configuració anterior; aquest <strong>problema el resol el mode <em>sols-amfitrió</em></strong>, doncs no empra la targeta física de la xarxa de l'amfitrió sino que es crea una virtual que estarà connectada al mateix switch virtual al que estaran connectades les targetes de xarxa de les MMVV amb el mateix mode de xarxa.</p>
+</div>
+<p>Per poder fer ús d'aquest mode, haurem de <strong>crear la targeta de xarxa virtual a l'equip amfitrió</strong>, per a tal cosa a l'administració de VB anirem a <strong><em>Fitxer -&gt; Administrador de xarxa-amfitrió</em></strong>.</p>
+<p><center><img alt="Configuració d'adaptadors de xarxa virtuals" src="../img/vbox/sols-amfitri%C3%B3.png" width="75%" /></center></p>
+<p>A partir d'aquest moment <strong>existeixen tantes targetes noves de xarxa com creem</strong>.</p>
+<p>Aquestes targetes hi ha que <strong>assignar-les una IP</strong> de la xarxa que hàgem triat, i açòes fa configurant els camps del recuadre situat en la part inferior de la finestra. Ho farem seleccionant previament vboxnet0:</p>
+<p><center><img alt="IP en sols-amfitrió" src="../img/vbox/ip-sols-amfitri%C3%B3.png" width="75%" /></center></p>
+<p>També podrem activar un servidor DHCP per evitar configurar manualment les targetes de xarxa de les MMVV que es connecten...</p>
+<h2 id="netplan">Netplan</h2>
+<p>Amb l'arribada d' <strong>Ubuntu 18.04</strong> arribàren canvis a la configuració dels serveis de xarxa.</p>
+<p><center><img alt="Estructura netplan" src="../img/netplan/netplan.png" width="50%" /></center></p>
+<p>A les versiona anteriors, tota la configuració es realitzava per interfície gràfica o mitjançant fitxers de configuració, situats en <strong>/etc/network</strong>. A partir d'ara, tindrem les dues opcions, però els fitxers de configuració es troben a <strong>/etc/netplan</strong> i tenen extensió <strong>yaml</strong>.</p>
+<p><center><img alt="Ruta dels fitxers de netplan" src="../img/netplan/netplan1.png" /></center></p>
+<p>Aquest fitxer és el que tindrem que modificar per tal d'aconseguir la configuració de xarxa que necessitem en cada cas.</p>
+<p><center><img alt="Configuració per defecte de netplan" src="../img/netplan/netplan2.png" /></center></p>
+<p>Aquesta és la configuració per defecte de la xarxa. Amb aquesta configuració és la interfície gràfica l'encarregada de controlar tots els dispositius de la xarxa. Aquesta opció s'estableix a la linia: <code>renderer: NetworkManager</code>.</p>
+<p>A la majoria dels casos amb aquesta configuració tindrem suficient però no tindrem control sobre els dispossitius de la xarxa.</p>
+<p>Per tal d'indicar que anem a ser nosaltres els qui definim el comportament i configuració de les interfícies de xarxa , haurem de modificar la linia anterior per: <code>renderer: networkd</code>.</p>
+<p>A partir d'aquest moment haurem d'especificar tota la informació necessària per al funcionament dels dispositius de xarxa.</p>
+<p>Anem a veure diferents exemples de configuracións de <strong>netplan</strong>, aquests exemples són bàsics però suficients per poder realitzar exercicis.</p>
+<div class="admonition warning">
+<p class="admonition-title">Informació</p>
+<p>Abans de veure els exemple, hi ha que tindre en compte que els fitxers en format <strong>yaml</strong> no acceptàven tabulacions al principi i per tal de realitzar les sangríes del text havíem d'emprar espais.</p>
+<p>A les versions més noves d'Ubuntu <strong>el fitxers yaml ja suporten la tabulació</strong>.</p>
+</div>
+<h3 id="configurar-targeta-de-xarxa-per-dhcp">Configurar targeta de xarxa per DHCP</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">network</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="nt">renderer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networkd</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">ethernets</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">enp0s3</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">      </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+</code></pre></div></td></tr></table></div>
+<p>On podem veure:</p>
+<ul>
+<li><code>renderer: networkd</code> -- configurem nosaltres el dispositius de xarxa</li>
+<li><code>ethernets</code> -- interfícies de xarxa a aconfigurar</li>
+<li><code>enp0s3</code> -- nom de la interfície de xarxa a configurar</li>
+<li><code>dhcp4: yes</code> -- DHCP activat</li>
+</ul>
+<p>Aquest tipus de configuació la utilitzarem quan tinguem una targeta de xarxa sobre un adaptador de VirtualBox que accepte DHCP, és a dir, NAT, Xarxa NAT i Sols anfitrió.</p>
+<h3 id="configurar-targeta-de-xarxa-amb-ip-fixa">Configurar targeta de xarxa amb IP fixa</h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">network</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">renderer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networkd</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">ethernets</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">enp0s3</span><span class="p">:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">      </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">10.0.2.10/24</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="nt">nameservers</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8.8.8.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">8.8.4.4</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="nt">routes</span><span class="p">:</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">          </span><span class="nt">via</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.0.2.2</span>
+</code></pre></div></td></tr></table></div>
+A banda dels punts anteriors podem veure:</p>
+<ul>
+<li><code>addresses: [10.0.2.10/24]</code> -- adreça de xarxa en format CIDR</li>
+<li><code>nameservers:</code> -- a partir d'aquesta linia, configuració dels DNS.</li>
+<li><code>routes:</code> -- gestió d'enrutament local, per exemple: porta d'enllaç (to: default - via...)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Gateway4 <em>deprecated</em></p>
+<p>En alguna documentació apareix la porta d'enllaça definida amb la directiva <strong>gateway4</strong>. Aquesta directiva ha estat marcada com obsoleta (<em>deprecated</em>) i <strong>no es recomana el seu ús</strong>. Per contra, es recomana l'ús de la directiva <strong>routes</strong> per gestionar polítiques d'enrutament, com la porta d'enllaç.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span>
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">network</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">renderer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networkd</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">ethernets</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="nt">enp0s3</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">            </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">10.10.10.2/24</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">            </span><span class="nt">gateway4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.10.10.1</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">            </span><span class="nt">nameservers</span><span class="p">:</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">                </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8.8.8.8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">8.8.4.4</span><span class="p p-Indicator">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="aplicar-les-configuracions">Aplicar les configuracions</h3>
+<p>La modificació del fitxer ubicat en <strong>/etc/netplan/</strong> no implica que s'apliquen els canvis.  Cada vegada que modifiquem aquest fitxer <strong>yaml</strong> haurem de realitzar algunes accions:</p>
+<ul>
+<li><code>sudo netplan -debug try</code>: tracta d'aplicar la configuració que hem definit. Si no hi ha errades ixirà un contador per tornar a la configuració anterior o polsant <strong><em>ENTER</em></strong> aplicar la nova.</li>
+<li><code>sudo netplan apply</code>: aplica directament la configuració que hem definit. S'ha d'emprar en el cas d'estar completament segur que tot és correcte.</li>
+</ul>
+<p><center><img alt="Configuració sense errors a la espera de ser acceptada" src="../img/netplan/netplan_try.png" /></center></p>
 
 
 
